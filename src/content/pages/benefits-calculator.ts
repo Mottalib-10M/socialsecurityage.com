@@ -16,7 +16,7 @@ export default definePage({
     nav: 'Earnings-record calculator',
     card: 'Paste the earnings from your SSA statement and get your AIME, your PIA and the check at each age.',
     title: 'Social Security Benefits Calculator 2026: Paste Your Record',
-    description: `Social Security benefits calculator for 2026: paste the earnings record from your SSA statement and see each year indexed, your AIME, PIA and the check from 62 to 70.`,
+    description: `Social Security benefits calculator for 2026: paste the earnings from your SSA statement, see each year indexed, your AIME, PIA and the check from 62 to 70.`,
     h1: 'Social Security benefits calculator from your own earnings record',
     intro: 'The closest you can get to the SSA computation without logging in: your real years of pay, indexed one by one.',
     resume: `Paste the "Taxed Social Security earnings" column of your earnings record, one year per line, and the calculator redoes what the SSA does with it in 2026. Each year before the year you turn 60 is multiplied by the national average wage index of that year divided by the index of the year worked, earnings above the year's taxable maximum are dropped, the best 35 years are averaged over 420 months and the result goes through the bend points of the year you turn 62. On the SSA's own 2026 example, a worker born in ${A.born} with a record from 1986 to 2025, the calculator returns the published AIME of ${$(A.aime)}, a PIA of ${$(A.pia, 2)} and ${$(A.benefit62)} a month at 62. Future years can be added at today's pay until the age you plan to stop working.`,
