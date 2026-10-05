@@ -1,0 +1,50 @@
+---
+/** Method and sources (trust page, RECETTE §8.2): formulas, rounding, tests, limits. */
+import PageLayout from '../../layouts/PageLayout.astro';
+import { route } from '../../i18n/routes';
+import { P, bendPoints } from '../../lib/engine/params';
+import { formatMoney, displayDate } from '../../lib/format';
+import { breadcrumbSchema, webPageSchema } from '../../lib/seo';
+import { REVIEW_CYCLE_MONTHS, CONTACT_EMAIL } from '../../data/site-config';
+const lang = 'en';
+const $ = (n: number, d = 0) => formatMoney(n, d);
+const title = 'Method 2026: How This Social Security Calculator Works';
+const description = 'Method 2026: the AWI indexing, best 35 years, bend points by eligibility year, COLAs, age factors, survivor and tax rules we apply, and the SSA examples we reproduce.';
+const h1 = 'Method, sources and limits';
+const path = route('method', lang);
+const sources = Object.values(P.sources);
+const A = P.ssa_examples_2026.caseA, B = P.ssa_examples_2026.caseB, M = P.max_benefit_2026;
+const bp = bendPoints(2026);
+---
+<PageLayout title={title} description={description} lang={lang} jsonLd={[webPageSchema({ name: h1, description, path, lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: h1, path }])]} breadcrumbs={[{ label: 'Method' }]}>
+  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">{h1}</h1></header>
+  <div class="prose prose-slate max-w-none">
+    <p>Every legal value on this site lives in one parameter file, read on its official source on <time datetime={P.retrieved_at}>{displayDate(P.retrieved_at, 'en-US')}</time>. Pages and calculators read that file; no amount is typed into a text. The SSA blocks automated readers on ssa.gov, so its actuarial tables were read in their archived copy of late September 2026 and checked against the Federal Register notice that publishes the same figures.</p>
+    <h2>The primary insurance amount</h2>
+    <ol>
+      <li><strong>Eligibility year</strong>: the year you turn 62, with the SSA's rule that you reach an age the day before your birthday (born on the 1st: previous month; born on January 1: previous year).</li>
+      <li><strong>Indexing</strong>: earnings of each year before the year you turn 60 are multiplied by the national average wage index of that year divided by the index of the year worked (20 CFR 404.211); later years count at face value. Earnings above each year's contribution and benefit base are dropped. The wage index series runs from 1951 to 2024.</li>
+      <li><strong>AIME</strong>: the 35 highest indexed years over 420 months, rounded down to the dollar.</li>
+      <li><strong>Formula</strong>: 90%, 32% and 15% of the brackets separated by the bend points of the eligibility year ({$(bp[0])} and {$(bp[1])} for 2026; the table goes back to 1979), rounded down to the dime (20 CFR 404.212).</li>
+      <li><strong>COLAs</strong>: from the eligibility year through December 2025 ({P.cola_2026.pct}%), each applied to the PIA and rounded down to the dime.</li>
+      <li><strong>Later eligibility</strong>: for people turning 62 after 2026, the 2024 wage index and the 2026 bend points stand in for figures not yet published. Results are then in today's dollars.</li>
+    </ol>
+    <h2>Age at the start of benefits</h2>
+    <p>Worker: 5/9 of 1% less per month before full retirement age for the first 36 months, 5/12 of 1% beyond; the reduction is rounded up to the dime before it is subtracted (20 CFR 404.410). Delayed credits: 2/3 of 1% per month after full retirement age up to 70 for anyone born after 1942, rounded down to the dime (20 CFR 404.313). The monthly benefit is rounded down to the dollar. Spouse: half the worker's PIA minus the spouse's own PIA, reduced by 25/36 of 1% for 36 months and 5/12 of 1% beyond, no reduction with a qualifying child in care. Widow(er): 100% of what the deceased received or of the PIA, reduced by up to 28.5% between 60 and the survivor full retirement age, and limited to the larger of the deceased's reduced benefit or 82.5% of the PIA when the deceased started early (POMS RS 00615.320).</p>
+    <h2>Work and taxes</h2>
+    <p>Earnings test 2026: $1 withheld per $2 above {$(P.earnings_test.lower_annual)}, and per $3 above {$(P.earnings_test.higher_annual)} in the months before full retirement age of the year you reach it. Taxation of benefits: Worksheet 1 of IRS Publication 915, with bases of {$(P.taxation.base1.single)} and {$(P.taxation.base2.single)} (single) or {$(P.taxation.base1.joint)} and {$(P.taxation.base2.joint)} (joint), 50% then 85%. Self-employment tax: 92.35% of net profit, 12.4% up to {$(P.taxable_max_2026)} and 2.9% on all.</p>
+    <h2>Tests run before each release</h2>
+    <ul>
+      <li>SSA case A, born {A.born}: AIME {$(A.aime)}, PIA {$(A.pia, 2)}, {$(A.benefit62)} at 62 (exact).</li>
+      <li>SSA case B, born {B.born}, maximum earnings: PIA {$(B.pia, 2)} after the 2021 to 2025 COLAs (exact).</li>
+      <li>SSA maximum-earner table for January 2026: {$(M.age62)} at 62 and 1 month, {$(M.age65)} at 65, {$(M.age66)} at 66, {$(M.age67)} at 67, {$(M.age70)} at 70 (all exact).</li>
+      <li>The worked examples of 20 CFR 404.410 (worker, spouse, widow) and 404.313, the SSA earnings-test examples for 2026, and IRS Publication 915 cases.</li>
+    </ul>
+    <h2>What the calculators do not do</h2>
+    <p>No disability benefits, no special minimum PIA for long low-wage careers, no railroad retirement, no foreign totalization periods, no family maximum except where a page says so, and no projection of future COLAs or wage growth. A career rebuilt from one salary assumes your pay kept the same position relative to the average wage every year; paste your real record for a better answer. Delayed credits earned in a year are shown as if already paid; the SSA adds some of them in the following January.</p>
+    <h2>Review cycle</h2>
+    <p>The parameter file is renewed every October, when the SSA announces the next COLA and wage index, and reviewed at least every {REVIEW_CYCLE_MONTHS} months. Errors: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <h2>Every source read</h2>
+    <ul>{sources.map((s) => <li><a href={s.url} target="_blank" rel="nofollow noopener noreferrer">{s.label.en}</a></li>)}</ul>
+  </div>
+</PageLayout>

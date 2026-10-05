@@ -1,0 +1,25 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { AUTHOR_NAME, CONTACT_EMAIL, LAST_UPDATED, REVIEW_CYCLE_MONTHS, SITE_NAMES } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+const lang = 'en';
+---
+<PageLayout title={`Contact ${SITE_NAMES[lang]}: report an error or embed the tool`} description="Write to the publisher of this Social Security calculator: report a figure that looks wrong, ask about the method, or ask how to embed the benefit calculator on your site." lang={lang} noindex={true} breadcrumbs={[{ label: 'Contact' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Contact</h1>
+    <p>Every message is read: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <h2>Reporting a mistake</h2>
+    <p>Send the page address and, for a calculation, the result's <strong>share link</strong>, which holds your inputs. If your SSA statement or a benefit letter shows a different figure, tell us which one and the year: the most common gap is an earnings year missing from a rebuilt career. Confirmed errors are fixed and turned into an automated test, as the <a href={route('editorial', lang)}>editorial policy</a> describes.</p>
+    <h2>Never send personal identifiers</h2>
+    <p>Do not send your Social Security number, a copy of your statement or a benefit letter. We do not need them, and we cannot act on your SSA record.</p>
+    <h2>Embedding the calculator</h2>
+    <p>The benefit calculator can be embedded free of charge in an iframe: the code is on the <a href={route('widget', lang)}>embed page</a>.</p>
+    <h2>What we cannot do</h2>
+    <p>We give no individual financial, legal or tax advice and cannot contact the SSA for you. For your own record, use my Social Security on ssa.gov, call 1-800-772-1213, or visit a local Social Security office.</p>
+    <h2>Response times</h2><p>Usually within five working days, errors first. Every parameter is reviewed at least every {REVIEW_CYCLE_MONTHS} months.</p>
+    <h2>Publisher</h2>
+    <LegalIdentity lang={lang} />
+    <p>See the <a href={route('terms', lang)}>legal notice</a>. Content owner: {AUTHOR_NAME}. Updated: {LAST_UPDATED}.</p>
+  </div>
+</PageLayout>

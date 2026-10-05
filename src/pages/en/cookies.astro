@@ -1,0 +1,15 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { CONTACT_EMAIL, LAST_UPDATED, SITE_NAMES } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+const lang = 'en';
+---
+<PageLayout title={`Cookies on ${SITE_NAMES[lang]}: none set today, how to check it`} description="Which cookies this Social Security calculator sets: none today. How to verify it in your browser and what this page will list if analytics are ever added to the site." lang={lang} noindex={true} breadcrumbs={[{ label: 'Cookies' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Cookies</h1>
+    <p>This page complements the <a href={route('privacy', lang)}>privacy policy</a>.</p>
+    <h2>No cookies today</h2><p>The calculators run in your browser and set no cookie. The site loads no analytics, no advertising and no social-network button. You can check it in your browser's developer tools, under Storage or Application, while using any calculator.</p>
+    <h2>If that changes</h2><p>If an audience-measurement tool is ever added, this page will list each cookie, its purpose and its lifetime, and explain how to block it.</p>
+    <p>Questions: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Updated: {LAST_UPDATED}.</p>
+  </div>
+</PageLayout>

@@ -1,0 +1,13 @@
+{
+ "accent": "#3C3B6E",
+ "symbol": "SS",
+ "variants": [
+  {
+   "file": "og-en.png",
+   "title": "Social Security Calc",
+   "subtitle": "",
+   "badge": "2026",
+   "brand": "Social Security Calc"
+  }
+ ]
+}

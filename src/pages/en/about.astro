@@ -1,0 +1,26 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { YEAR, LAST_UPDATED, AUTHOR_NAME, CONTACT_EMAIL, AUTHOR_ROLE, SITE_NAMES } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { P } from '../../lib/engine/params';
+import { personSchema, organizationSchema, breadcrumbSchema, profilePageSchema } from '../../lib/seo';
+import { displayDate, formatMoney } from '../../lib/format';
+const lang = 'en';
+const A = P.ssa_examples_2026.caseA, B = P.ssa_examples_2026.caseB, M = P.max_benefit_2026;
+---
+<PageLayout title="About Social Security Calc: who builds it and why it shows its math" description="Who publishes Social Security Calc, why every step of the PIA is shown, how the engine is tested against SSA examples, how the site is funded and how to report a mistake." lang={lang} jsonLd={[personSchema(lang), organizationSchema(lang), profilePageSchema({ path: route('about', lang), lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'About', path: route('about', lang) }])]} breadcrumbs={[{ label: 'About' }]}>
+  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">About {SITE_NAMES[lang]}</h1></header>
+  <div class="prose prose-slate max-w-none">
+    <div class="not-prose mb-6"><p class="text-lg font-semibold text-navy-900">{AUTHOR_NAME}</p><p class="text-navy-700">{AUTHOR_ROLE[lang]}</p></div>
+    <p>{AUTHOR_NAME} publishes this site. It answers one question for people approaching retirement in the United States: how much Social Security will I get, and when should I start it? It does so by showing the calculation the Social Security Administration performs, not by printing a single number with nothing behind it.</p>
+    <h2>Why a calculator that shows its work</h2>
+    <p>The SSA's own answer to "how much will I get" sits behind a my Social Security login or in a program you have to download. Most private calculators return an estimate without saying which wage index, which bend points or which cost-of-living adjustments they used, and many of them exist to route visitors to an advisor. We think the formula is simple enough to be read: each year of pay indexed to the average wage, the best 35 years averaged, three brackets, an age adjustment. Seeing it lets you check your SSA statement, spot a missing year of earnings, and understand why waiting from 62 to 70 changes the check by three quarters.</p>
+    <h2>How we know the numbers are right</h2>
+    <p>The engine is tested against the SSA actuaries' own published examples for 2026. It reproduces their case A (born in {A.born}, AIME {formatMoney(A.aime)}, PIA {formatMoney(A.pia, 2)}, {formatMoney(A.benefit62)} a month at 62), their case B (born in {B.born}, PIA {formatMoney(B.pia, 2)}) and their maximum-earner table ({formatMoney(M.age62)} at 62 and {formatMoney(M.age70)} at 70), to the dime and to the dollar. The rules of the Code of Federal Regulations on age reductions and delayed credits, and the worksheet of IRS Publication 915 on taxation, are tested the same way. The full list is on the <a href={route('method', lang)}>method page</a>.</p>
+    <h2>What we are not</h2>
+    <p>{AUTHOR_NAME} is not the Social Security Administration and is not affiliated with it, with the IRS or with Medicare. We are not financial advisors, insurers or annuity sellers, we pass no contact details to anyone, and we take no commission. Results are estimates computed from what you type; the SSA alone decides your benefit from your earnings record.</p>
+    <h2>Funding</h2><p>The site is free. If it ever carries advertising, no ad will sit above a calculator and no page will carry more than three. Nothing you type is sold or even sent: calculations run in your browser.</p>
+    <h2>Contact and corrections</h2><p>A figure looks wrong, a rule has changed, a situation is missing? Write to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> with the page and, if possible, the official source. See the <a href={route('editorial', lang)}>editorial policy</a> and the <a href={route('terms', lang)}>legal notice</a>.</p>
+    <p class="text-sm text-navy-600">{YEAR} parameters, checked on <time datetime={LAST_UPDATED}>{displayDate(LAST_UPDATED, 'en-US')}</time>.</p>
+  </div>
+</PageLayout>

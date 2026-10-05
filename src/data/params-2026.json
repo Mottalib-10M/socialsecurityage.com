@@ -1,0 +1,1100 @@
+{
+ "_readme": "All legal parameters of the site live here, never hard-coded (RECETTE-SITE.md \u00a74). Each value was read on the cited official source on retrieved_at. ssa.gov blocks robots (Akamai 403): its tables were read in their Wayback copy of late September 2026 and cross-checked against the Federal Register notice 90 FR 49047.",
+ "year": 2026,
+ "retrieved_at": "2026-10-05",
+ "valid_from": "2026-01-01",
+ "valid_to": "2026-12-31",
+ "series": {
+  "_note": "awi: national average wage index 1951-2024 (SSA OACT). bend_points: [PIA 1st, PIA 2nd, family max 1st, 2nd, 3rd] by year of eligibility 1979-2026. taxable_max: contribution and benefit base 1951-2026. cola: COLA effective December of the year, 1975-2025 (percent).",
+  "awi": {
+   "1951": 2799.16,
+   "1952": 2973.32,
+   "1953": 3139.44,
+   "1954": 3155.64,
+   "1955": 3301.44,
+   "1956": 3532.36,
+   "1957": 3641.72,
+   "1958": 3673.8,
+   "1959": 3855.8,
+   "1960": 4007.12,
+   "1961": 4086.76,
+   "1962": 4291.4,
+   "1963": 4396.64,
+   "1964": 4576.32,
+   "1965": 4658.72,
+   "1966": 4938.36,
+   "1967": 5213.44,
+   "1968": 5571.76,
+   "1969": 5893.76,
+   "1970": 6186.24,
+   "1971": 6497.08,
+   "1972": 7133.8,
+   "1973": 7580.16,
+   "1974": 8030.76,
+   "1975": 8630.92,
+   "1976": 9226.48,
+   "1977": 9779.44,
+   "1978": 10556.03,
+   "1979": 11479.46,
+   "1980": 12513.46,
+   "1981": 13773.1,
+   "1982": 14531.34,
+   "1983": 15239.24,
+   "1984": 16135.07,
+   "1985": 16822.51,
+   "1986": 17321.82,
+   "1987": 18426.51,
+   "1988": 19334.04,
+   "1989": 20099.55,
+   "1990": 21027.98,
+   "1991": 21811.6,
+   "1992": 22935.42,
+   "1993": 23132.67,
+   "1994": 23753.53,
+   "1995": 24705.66,
+   "1996": 25913.9,
+   "1997": 27426.0,
+   "1998": 28861.44,
+   "1999": 30469.84,
+   "2000": 32154.82,
+   "2001": 32921.92,
+   "2002": 33252.09,
+   "2003": 34064.95,
+   "2004": 35648.55,
+   "2005": 36952.94,
+   "2006": 38651.41,
+   "2007": 40405.48,
+   "2008": 41334.97,
+   "2009": 40711.61,
+   "2010": 41673.83,
+   "2011": 42979.61,
+   "2012": 44321.67,
+   "2013": 44888.16,
+   "2014": 46481.52,
+   "2015": 48098.63,
+   "2016": 48642.15,
+   "2017": 50321.89,
+   "2018": 52145.8,
+   "2019": 54099.99,
+   "2020": 55628.6,
+   "2021": 60575.07,
+   "2022": 63795.13,
+   "2023": 66621.8,
+   "2024": 69846.57
+  },
+  "bend_points": {
+   "1979": [
+    180,
+    1085,
+    230,
+    332,
+    433
+   ],
+   "1980": [
+    194,
+    1171,
+    248,
+    358,
+    467
+   ],
+   "1981": [
+    211,
+    1274,
+    270,
+    390,
+    508
+   ],
+   "1982": [
+    230,
+    1388,
+    294,
+    425,
+    554
+   ],
+   "1983": [
+    254,
+    1528,
+    324,
+    468,
+    610
+   ],
+   "1984": [
+    267,
+    1612,
+    342,
+    493,
+    643
+   ],
+   "1985": [
+    280,
+    1691,
+    358,
+    517,
+    675
+   ],
+   "1986": [
+    297,
+    1790,
+    379,
+    548,
+    714
+   ],
+   "1987": [
+    310,
+    1866,
+    396,
+    571,
+    745
+   ],
+   "1988": [
+    319,
+    1922,
+    407,
+    588,
+    767
+   ],
+   "1989": [
+    339,
+    2044,
+    433,
+    626,
+    816
+   ],
+   "1990": [
+    356,
+    2145,
+    455,
+    656,
+    856
+   ],
+   "1991": [
+    370,
+    2230,
+    473,
+    682,
+    890
+   ],
+   "1992": [
+    387,
+    2333,
+    495,
+    714,
+    931
+   ],
+   "1993": [
+    401,
+    2420,
+    513,
+    740,
+    966
+   ],
+   "1994": [
+    422,
+    2545,
+    539,
+    779,
+    1016
+   ],
+   "1995": [
+    426,
+    2567,
+    544,
+    785,
+    1024
+   ],
+   "1996": [
+    437,
+    2635,
+    559,
+    806,
+    1052
+   ],
+   "1997": [
+    455,
+    2741,
+    581,
+    839,
+    1094
+   ],
+   "1998": [
+    477,
+    2875,
+    609,
+    880,
+    1147
+   ],
+   "1999": [
+    505,
+    3043,
+    645,
+    931,
+    1214
+   ],
+   "2000": [
+    531,
+    3202,
+    679,
+    980,
+    1278
+   ],
+   "2001": [
+    561,
+    3381,
+    717,
+    1034,
+    1349
+   ],
+   "2002": [
+    592,
+    3567,
+    756,
+    1092,
+    1424
+   ],
+   "2003": [
+    606,
+    3653,
+    774,
+    1118,
+    1458
+   ],
+   "2004": [
+    612,
+    3689,
+    782,
+    1129,
+    1472
+   ],
+   "2005": [
+    627,
+    3779,
+    801,
+    1156,
+    1508
+   ],
+   "2006": [
+    656,
+    3955,
+    838,
+    1210,
+    1578
+   ],
+   "2007": [
+    680,
+    4100,
+    869,
+    1255,
+    1636
+   ],
+   "2008": [
+    711,
+    4288,
+    909,
+    1312,
+    1711
+   ],
+   "2009": [
+    744,
+    4483,
+    950,
+    1372,
+    1789
+   ],
+   "2010": [
+    761,
+    4586,
+    972,
+    1403,
+    1830
+   ],
+   "2011": [
+    749,
+    4517,
+    957,
+    1382,
+    1803
+   ],
+   "2012": [
+    767,
+    4624,
+    980,
+    1415,
+    1845
+   ],
+   "2013": [
+    791,
+    4768,
+    1011,
+    1459,
+    1903
+   ],
+   "2014": [
+    816,
+    4917,
+    1042,
+    1505,
+    1962
+   ],
+   "2015": [
+    826,
+    4980,
+    1056,
+    1524,
+    1987
+   ],
+   "2016": [
+    856,
+    5157,
+    1093,
+    1578,
+    2058
+   ],
+   "2017": [
+    885,
+    5336,
+    1131,
+    1633,
+    2130
+   ],
+   "2018": [
+    895,
+    5397,
+    1144,
+    1651,
+    2154
+   ],
+   "2019": [
+    926,
+    5583,
+    1184,
+    1708,
+    2228
+   ],
+   "2020": [
+    960,
+    5785,
+    1226,
+    1770,
+    2309
+   ],
+   "2021": [
+    996,
+    6002,
+    1272,
+    1837,
+    2395
+   ],
+   "2022": [
+    1024,
+    6172,
+    1308,
+    1889,
+    2463
+   ],
+   "2023": [
+    1115,
+    6721,
+    1425,
+    2056,
+    2682
+   ],
+   "2024": [
+    1174,
+    7078,
+    1500,
+    2166,
+    2825
+   ],
+   "2025": [
+    1226,
+    7391,
+    1567,
+    2262,
+    2950
+   ],
+   "2026": [
+    1286,
+    7749,
+    1643,
+    2371,
+    3093
+   ]
+  },
+  "taxable_max": {
+   "1951": 3600,
+   "1952": 3600,
+   "1953": 3600,
+   "1954": 3600,
+   "1955": 4200,
+   "1956": 4200,
+   "1957": 4200,
+   "1958": 4200,
+   "1959": 4800,
+   "1960": 4800,
+   "1961": 4800,
+   "1962": 4800,
+   "1963": 4800,
+   "1964": 4800,
+   "1965": 4800,
+   "1966": 6600,
+   "1967": 6600,
+   "1968": 7800,
+   "1969": 7800,
+   "1970": 7800,
+   "1971": 7800,
+   "1972": 9000,
+   "1973": 10800,
+   "1974": 13200,
+   "1975": 14100,
+   "1976": 15300,
+   "1977": 16500,
+   "1978": 17700,
+   "1979": 22900,
+   "1980": 25900,
+   "1981": 29700,
+   "1982": 32400,
+   "1983": 35700,
+   "1984": 37800,
+   "1985": 39600,
+   "1986": 42000,
+   "1987": 43800,
+   "1988": 45000,
+   "1989": 48000,
+   "1990": 51300,
+   "1991": 53400,
+   "1992": 55500,
+   "1993": 57600,
+   "1994": 60600,
+   "1995": 61200,
+   "1996": 62700,
+   "1997": 65400,
+   "1998": 68400,
+   "1999": 72600,
+   "2000": 76200,
+   "2001": 80400,
+   "2002": 84900,
+   "2003": 87000,
+   "2004": 87900,
+   "2005": 90000,
+   "2006": 94200,
+   "2007": 97500,
+   "2008": 102000,
+   "2009": 106800,
+   "2010": 106800,
+   "2011": 106800,
+   "2012": 110100,
+   "2013": 113700,
+   "2014": 117000,
+   "2015": 118500,
+   "2016": 118500,
+   "2017": 127200,
+   "2018": 128400,
+   "2019": 132900,
+   "2020": 137700,
+   "2021": 142800,
+   "2022": 147000,
+   "2023": 160200,
+   "2024": 168600,
+   "2025": 176100,
+   "2026": 184500
+  },
+  "cola": {
+   "1975": 8.0,
+   "1976": 6.4,
+   "1977": 5.9,
+   "1978": 6.5,
+   "1979": 9.9,
+   "1980": 14.3,
+   "1981": 11.2,
+   "1982": 7.4,
+   "1983": 3.5,
+   "1984": 3.5,
+   "1985": 3.1,
+   "1986": 1.3,
+   "1987": 4.2,
+   "1988": 4.0,
+   "1989": 4.7,
+   "1990": 5.4,
+   "1991": 3.7,
+   "1992": 3.0,
+   "1993": 2.6,
+   "1994": 2.8,
+   "1995": 2.6,
+   "1996": 2.9,
+   "1997": 2.1,
+   "1998": 1.3,
+   "1999": 2.5,
+   "2000": 3.5,
+   "2001": 2.6,
+   "2002": 1.4,
+   "2003": 2.1,
+   "2004": 2.7,
+   "2005": 4.1,
+   "2006": 3.3,
+   "2007": 2.3,
+   "2008": 5.8,
+   "2009": 0.0,
+   "2010": 0.0,
+   "2011": 3.6,
+   "2012": 1.7,
+   "2013": 1.5,
+   "2014": 1.7,
+   "2015": 0.0,
+   "2016": 0.3,
+   "2017": 2.0,
+   "2018": 2.8,
+   "2019": 1.6,
+   "2020": 1.3,
+   "2021": 5.9,
+   "2022": 8.7,
+   "2023": 3.2,
+   "2024": 2.5,
+   "2025": 2.8
+  }
+ },
+ "pia": {
+  "factors": [
+   0.9,
+   0.32,
+   0.15
+  ],
+  "computation_years": 35,
+  "rounding": "AIME down to $1; PIA down to $0.10; each COLA applied to the PIA rounded down to $0.10; monthly benefit down to $1"
+ },
+ "family_max": {
+  "factors": [
+   1.5,
+   2.72,
+   1.34,
+   1.75
+  ]
+ },
+ "cola_2026": {
+  "pct": 2.8,
+  "effective": "December 2025",
+  "payable": "January 2026",
+  "cpiw_q3_2024": 308.729,
+  "cpiw_q3_2025": 317.265
+ },
+ "taxable_max_2026": 184500,
+ "payroll": {
+  "oasdi_employee": 0.062,
+  "oasdi_employer": 0.062,
+  "oasdi_self_employed": 0.124,
+  "hi_employee": 0.0145,
+  "hi_self_employed": 0.029,
+  "se_net_factor": 0.9235,
+  "se_min_net": 400,
+  "addl_medicare_single": 200000,
+  "addl_medicare_joint": 250000
+ },
+ "earnings_test": {
+  "lower_annual": 24480,
+  "lower_monthly": 2040,
+  "higher_annual": 65160,
+  "higher_monthly": 5430,
+  "lower_withhold": 0.5,
+  "higher_withhold": 0.3333333333333333
+ },
+ "credits": {
+  "qc_amount": 1890,
+  "max_per_year": 4,
+  "needed_retirement": 40
+ },
+ "reduction": {
+  "worker_first36": 0.005555555555555556,
+  "worker_after36": 0.004166666666666667,
+  "spouse_first36": 0.006944444444444444,
+  "spouse_after36": 0.004166666666666667,
+  "widow_max": 0.285,
+  "widow_earliest_age": 60
+ },
+ "drc": {
+  "monthly_born_after_1942": 0.006666666666666667,
+  "stop_age": 70
+ },
+ "fra_retirement": [
+  {
+   "from": 1938,
+   "years": 65,
+   "months": 2
+  },
+  {
+   "from": 1939,
+   "years": 65,
+   "months": 4
+  },
+  {
+   "from": 1940,
+   "years": 65,
+   "months": 6
+  },
+  {
+   "from": 1941,
+   "years": 65,
+   "months": 8
+  },
+  {
+   "from": 1942,
+   "years": 65,
+   "months": 10
+  },
+  {
+   "from": 1943,
+   "years": 66,
+   "months": 0
+  },
+  {
+   "from": 1955,
+   "years": 66,
+   "months": 2
+  },
+  {
+   "from": 1956,
+   "years": 66,
+   "months": 4
+  },
+  {
+   "from": 1957,
+   "years": 66,
+   "months": 6
+  },
+  {
+   "from": 1958,
+   "years": 66,
+   "months": 8
+  },
+  {
+   "from": 1959,
+   "years": 66,
+   "months": 10
+  },
+  {
+   "from": 1960,
+   "years": 67,
+   "months": 0
+  }
+ ],
+ "fra_survivor": [
+  {
+   "from": 1940,
+   "years": 65,
+   "months": 2
+  },
+  {
+   "from": 1941,
+   "years": 65,
+   "months": 4
+  },
+  {
+   "from": 1942,
+   "years": 65,
+   "months": 6
+  },
+  {
+   "from": 1943,
+   "years": 65,
+   "months": 8
+  },
+  {
+   "from": 1944,
+   "years": 65,
+   "months": 10
+  },
+  {
+   "from": 1945,
+   "years": 66,
+   "months": 0
+  },
+  {
+   "from": 1957,
+   "years": 66,
+   "months": 2
+  },
+  {
+   "from": 1958,
+   "years": 66,
+   "months": 4
+  },
+  {
+   "from": 1959,
+   "years": 66,
+   "months": 6
+  },
+  {
+   "from": 1960,
+   "years": 66,
+   "months": 8
+  },
+  {
+   "from": 1961,
+   "years": 66,
+   "months": 10
+  },
+  {
+   "from": 1962,
+   "years": 67,
+   "months": 0
+  }
+ ],
+ "family": {
+  "spouse_max": 0.5,
+  "child_of_retired": 0.5,
+  "child_survivor": 0.75,
+  "widow_full": 1.0,
+  "widow_limit": 0.825,
+  "divorce_marriage_years": 10,
+  "divorce_independent_years": 2,
+  "widow_marriage_months": 9,
+  "widow_remarriage_age": 60,
+  "lump_sum_death": 255
+ },
+ "taxation": {
+  "base1": {
+   "single": 25000,
+   "joint": 32000,
+   "separate_together": 0
+  },
+  "base2": {
+   "single": 34000,
+   "joint": 44000,
+   "separate_together": 0
+  },
+  "rate1": 0.5,
+  "rate2": 0.85,
+  "nonresident_share": 0.85,
+  "nonresident_rate": 0.3,
+  "senior_deduction": {
+   "amount": 6000,
+   "years": "2025-2028",
+   "phaseout_single": 75000,
+   "phaseout_joint": 150000,
+   "age": 65
+  },
+  "withholding_options": [
+   0.07,
+   0.1,
+   0.12,
+   0.22
+  ]
+ },
+ "medicare": {
+  "part_b_2026": 202.9,
+  "part_b_2025": 185.0,
+  "part_b_deductible_2026": 283
+ },
+ "stats_aug_2026": {
+  "retired_worker_avg": 2087.52,
+  "spouse_avg": 986.7,
+  "widow_avg": 1934.37,
+  "retired_workers_thousands": 54947,
+  "released": "September 2026"
+ },
+ "max_benefit_2026": {
+  "_note": "SSA examplemax: steady maximum-taxable earnings since age 22, retirement in January 2026",
+  "age62": 2969,
+  "age65": 3467,
+  "age66": 3752,
+  "age67": 4207,
+  "age70": 5181,
+  "aime62": 14358,
+  "pia62": 4216.9
+ },
+ "ssa_examples_2026": {
+  "caseA": {
+   "born": 1964,
+   "aime": 5825,
+   "pia": 2609.8,
+   "benefit62": 1826,
+   "earnings_1986": 16196,
+   "factor_1986": 4.0323,
+   "indexed_1986": 65307
+  },
+  "caseB": {
+   "born": 1959,
+   "aime": 11463,
+   "pia": 4152.4,
+   "benefit_fra": 4152
+  }
+ },
+ "ssfa": {
+  "signed": "2025-01-05",
+  "public_law": "118-273",
+  "bill": "H.R. 82",
+  "applies_after": "December 2023",
+  "payments_sent": 3.1,
+  "payments_total_billion": 17
+ },
+ "payment_days": {
+  "days_1_10": 2,
+  "days_11_20": 3,
+  "days_21_31": 4,
+  "legacy_day": 3,
+  "legacy_before": "1997-05-01"
+ },
+ "claiming": {
+  "retroactive_months": 6,
+  "withdraw_within_months": 12
+ },
+ "sources": {
+  "frNotice2026": {
+   "url": "https://www.federalregister.gov/documents/2025/11/03/2025-19763/cost-of-living-increase-and-other-determinations-for-2026",
+   "label": {
+    "en": "SSA, Cost-of-Living Increase and Other Determinations for 2026, 90 FR 49047 (Nov. 3, 2025)"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaAwi": {
+   "url": "https://www.ssa.gov/oact/cola/AWI.html",
+   "label": {
+    "en": "SSA Office of the Chief Actuary, National Average Wage Index series 1951-2024"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaBendPoints": {
+   "url": "https://www.ssa.gov/oact/cola/bendpoints.html",
+   "label": {
+    "en": "SSA Office of the Chief Actuary, Benefit formula bend points 1979-2026"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaCbb": {
+   "url": "https://www.ssa.gov/oact/cola/cbb.html",
+   "label": {
+    "en": "SSA Office of the Chief Actuary, Contribution and benefit base 1937-2026"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaColaSeries": {
+   "url": "https://www.ssa.gov/oact/cola/colaseries.html",
+   "label": {
+    "en": "SSA Office of the Chief Actuary, Cost-of-living adjustments 1975-2025"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaBenefitFormula": {
+   "url": "https://www.ssa.gov/oact/cola/Benefits.html",
+   "label": {
+    "en": "SSA Office of the Chief Actuary, Social Security benefit amounts (AIME and PIA)"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaRetireExample": {
+   "url": "https://www.ssa.gov/oact/progdata/retirebenefit1.html",
+   "label": {
+    "en": "SSA, Benefit calculation examples for workers retiring in 2026 (cases A and B)"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaMaxExample": {
+   "url": "https://www.ssa.gov/oact/cola/examplemax.html",
+   "label": {
+    "en": "SSA, Benefit examples for workers with maximum-taxable earnings (2026)"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaNra": {
+   "url": "https://www.ssa.gov/oact/progdata/nra.html",
+   "label": {
+    "en": "SSA, Normal retirement age by year of birth"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaEarlyRetire": {
+   "url": "https://www.ssa.gov/oact/quickcalc/earlyretire.html",
+   "label": {
+    "en": "SSA, Benefit reduction for early retirement (worker and spouse at 62)"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaDelayed": {
+   "url": "https://www.ssa.gov/benefits/retirement/planner/delayret.html",
+   "label": {
+    "en": "SSA Benefits Planner, Delayed retirement credits"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaWhileWorking": {
+   "url": "https://www.ssa.gov/benefits/retirement/planner/whileworking.html",
+   "label": {
+    "en": "SSA Benefits Planner, Receiving benefits while working (2026 limits)"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaCredits": {
+   "url": "https://www.ssa.gov/benefits/retirement/planner/credits.html",
+   "label": {
+    "en": "SSA Benefits Planner, Social Security credits (2026)"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaSpouse": {
+   "url": "https://www.ssa.gov/oact/quickcalc/spouse.html",
+   "label": {
+    "en": "SSA, Benefits for spouses (reduction 25/36 and 5/12 of 1%)"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaSurvivor": {
+   "url": "https://www.ssa.gov/benefits/survivors/survivorchartred.html",
+   "label": {
+    "en": "SSA, What you could get from survivor benefits"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaSsfa": {
+   "url": "https://www.ssa.gov/benefits/retirement/social-security-fairness-act.html",
+   "label": {
+    "en": "SSA, Social Security Fairness Act: WEP and GPO update (July 21, 2025)"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaSnapshot": {
+   "url": "https://www.ssa.gov/policy/docs/quickfacts/stat_snapshot/",
+   "label": {
+    "en": "SSA, Monthly Statistical Snapshot, August 2026 (released September 2026)"
+   },
+   "read": "2026-10-05"
+  },
+  "pl118_273": {
+   "url": "https://www.govinfo.gov/content/pkg/PLAW-118publ273/html/PLAW-118publ273.htm",
+   "label": {
+    "en": "Public Law 118-273, Social Security Fairness Act (H.R. 82), approved January 5, 2025"
+   },
+   "read": "2026-10-05"
+  },
+  "poms615320": {
+   "url": "https://secure.ssa.gov/poms.nsf/lnx/0300615320",
+   "label": {
+    "en": "SSA POMS RS 00615.320, Reduced widow(er)'s benefit: the RIB-LIM (82.5 percent)"
+   },
+   "read": "2026-10-05"
+  },
+  "cfr404_211": {
+   "url": "https://www.ecfr.gov/current/title-20/section-404.211",
+   "label": {
+    "en": "20 CFR \u00a7 404.211, computing average indexed monthly earnings (eCFR, current to 2026-10-01)"
+   },
+   "read": "2026-10-05"
+  },
+  "cfr404_212": {
+   "url": "https://www.ecfr.gov/current/title-20/section-404.212",
+   "label": {
+    "en": "20 CFR \u00a7 404.212, primary insurance amount from AIME (eCFR, current to 2026-10-01)"
+   },
+   "read": "2026-10-05"
+  },
+  "cfr404_313": {
+   "url": "https://www.ecfr.gov/current/title-20/section-404.313",
+   "label": {
+    "en": "20 CFR \u00a7 404.313, delayed retirement credits (eCFR, current to 2026-10-01)"
+   },
+   "read": "2026-10-05"
+  },
+  "cfr404_331": {
+   "url": "https://www.ecfr.gov/current/title-20/section-404.331",
+   "label": {
+    "en": "20 CFR \u00a7 404.331, wife's or husband's benefits as a divorced spouse (eCFR, current to 2026-10-01)"
+   },
+   "read": "2026-10-05"
+  },
+  "cfr404_335": {
+   "url": "https://www.ecfr.gov/current/title-20/section-404.335",
+   "label": {
+    "en": "20 CFR \u00a7 404.335, widow's or widower's benefits (eCFR, current to 2026-10-01)"
+   },
+   "read": "2026-10-05"
+  },
+  "cfr404_336": {
+   "url": "https://www.ecfr.gov/current/title-20/section-404.336",
+   "label": {
+    "en": "20 CFR \u00a7 404.336, surviving divorced spouse (eCFR, current to 2026-10-01)"
+   },
+   "read": "2026-10-05"
+  },
+  "cfr404_403": {
+   "url": "https://www.ecfr.gov/current/title-20/section-404.403",
+   "label": {
+    "en": "20 CFR \u00a7 404.403, family maximum (eCFR, current to 2026-10-01)"
+   },
+   "read": "2026-10-05"
+  },
+  "cfr404_409": {
+   "url": "https://www.ecfr.gov/current/title-20/section-404.409",
+   "label": {
+    "en": "20 CFR \u00a7 404.409, full retirement age (eCFR, current to 2026-10-01)"
+   },
+   "read": "2026-10-05"
+  },
+  "cfr404_410": {
+   "url": "https://www.ecfr.gov/current/title-20/section-404.410",
+   "label": {
+    "en": "20 CFR \u00a7 404.410, reduction before full retirement age (eCFR, current to 2026-10-01)"
+   },
+   "read": "2026-10-05"
+  },
+  "cfr404_430": {
+   "url": "https://www.ecfr.gov/current/title-20/section-404.430",
+   "label": {
+    "en": "20 CFR \u00a7 404.430, earnings test exempt amounts (eCFR, current to 2026-10-01)"
+   },
+   "read": "2026-10-05"
+  },
+  "cfr404_621": {
+   "url": "https://www.ecfr.gov/current/title-20/section-404.621",
+   "label": {
+    "en": "20 CFR \u00a7 404.621, retroactive benefits (eCFR, current to 2026-10-01)"
+   },
+   "read": "2026-10-05"
+  },
+  "cfr404_640": {
+   "url": "https://www.ecfr.gov/current/title-20/section-404.640",
+   "label": {
+    "en": "20 CFR \u00a7 404.640, withdrawal of an application (eCFR, current to 2026-10-01)"
+   },
+   "read": "2026-10-05"
+  },
+  "cfr404_1807": {
+   "url": "https://www.ecfr.gov/current/title-20/section-404.1807",
+   "label": {
+    "en": "20 CFR \u00a7 404.1807, monthly payment day (eCFR, current to 2026-10-01)"
+   },
+   "read": "2026-10-05"
+  },
+  "irsP915": {
+   "url": "https://www.irs.gov/publications/p915",
+   "label": {
+    "en": "IRS Publication 915 (2025), Social Security and Equivalent Railroad Retirement Benefits"
+   },
+   "read": "2026-10-05"
+  },
+  "irsTc554": {
+   "url": "https://www.irs.gov/taxtopics/tc554",
+   "label": {
+    "en": "IRS Topic no. 554, Self-employment tax"
+   },
+   "read": "2026-10-05"
+  },
+  "irsSenior": {
+   "url": "https://www.irs.gov/newsroom/one-big-beautiful-bill-act-tax-deductions-for-working-americans-and-seniors",
+   "label": {
+    "en": "IRS, One Big Beautiful Bill Act: deduction for seniors (2025-2028)"
+   },
+   "read": "2026-10-05"
+  },
+  "cmsPartB": {
+   "url": "https://www.cms.gov/newsroom/fact-sheets/2026-medicare-parts-b-premiums-deductibles",
+   "label": {
+    "en": "CMS, 2026 Medicare Parts A and B premiums and deductibles"
+   },
+   "read": "2026-10-05"
+  },
+  "cfr404_802": {
+   "url": "https://www.ecfr.gov/current/title-20/section-404.802",
+   "label": {
+    "en": "20 CFR \u00a7 404.802, earnings record definitions and the time limit for corrections (eCFR, current to 2026-10-01)"
+   },
+   "read": "2026-10-05"
+  }
+ }
+}

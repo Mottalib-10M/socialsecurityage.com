@@ -1,0 +1,28 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { AUTHOR_NAME, CONTACT_EMAIL, LAST_UPDATED, REVIEW_CYCLE_MONTHS, SITE_NAMES } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+const lang = 'en';
+---
+<PageLayout title={`Editorial policy of ${SITE_NAMES[lang]}: sources and corrections`} description="Where the Social Security figures on this site come from, who checks them, how often the parameter file is renewed, and what happens when a reader reports a mistake." lang={lang} noindex={true} breadcrumbs={[{ label: 'Editorial policy' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Editorial and corrections policy</h1>
+    <p>Deciding when to start Social Security is close to irreversible after the first year. So we say where every figure comes from, who stands behind it and what happens when one is wrong.</p>
+    <h2>Responsibility</h2><p>Content and calculations are the responsibility of {AUTHOR_NAME}. Contact: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <h2>Primary sources only</h2>
+    <p>No rule or amount is taken from a blog, a newspaper or a financial firm. We read:</p>
+    <ul>
+      <li><strong>the Federal Register</strong>: the SSA's yearly notice on the COLA, the wage index and every indexed amount;</li>
+      <li><strong>the SSA Office of the Chief Actuary</strong>: wage index, bend points, taxable maximum, COLA series and worked examples;</li>
+      <li><strong>the Code of Federal Regulations, title 20, part 404</strong>, and the SSA's operations manual (POMS) for the detailed rules;</li>
+      <li><strong>the IRS</strong>: Publication 915 and self-employment tax guidance;</li>
+      <li><strong>CMS</strong> for Medicare premiums, and <strong>govinfo.gov</strong> for the text of public laws.</li>
+    </ul>
+    <h2>Tests before release</h2><p>The SSA's own 2026 examples (cases A and B, the maximum-earner table), the worked examples of the regulations and the IRS worksheet are replayed at every build. A difference of one dime blocks the release.</p>
+    <h2>Update cycle</h2><p>The parameter file is renewed each October, after the SSA announces the COLA and the new wage index, and reviewed at least every {REVIEW_CYCLE_MONTHS} months or when a law changes a rule. The date shown on each page comes from that file.</p>
+    <h2>Handling errors</h2>
+    <ol><li>Check against the primary source.</li><li>Fix the data or the code and add a test.</li><li>Publish with a new date; a significant correction is stated on the page concerned.</li></ol>
+    <h2>Independence</h2><p>We take no money from advisors, insurers, annuity sellers or any other firm, and we pass no visitor to them. Any such relationship would be stated in the text.</p>
+    <p>See also the <a href={route('method', lang)}>method page</a>. Policy version: {LAST_UPDATED}.</p>
+  </div>
+</PageLayout>
