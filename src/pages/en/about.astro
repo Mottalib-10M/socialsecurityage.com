@@ -8,7 +8,7 @@ import { displayDate, formatMoney } from '../../lib/format';
 const lang = 'en';
 const A = P.ssa_examples_2026.caseA, B = P.ssa_examples_2026.caseB, M = P.max_benefit_2026;
 ---
-<PageLayout title="About Social Security Calc: who builds it and why it shows its math" description="Who publishes Social Security Calc, why every step of the PIA is shown, how the engine is tested against SSA examples, how the site is funded and how to report a mistake." lang={lang} jsonLd={[personSchema(lang), organizationSchema(lang), profilePageSchema({ path: route('about', lang), lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'About', path: route('about', lang) }])]} breadcrumbs={[{ label: 'About' }]}>
+<PageLayout title="Social Security Calc 2026: Publisher, Tests and Independence" description="Independent publisher of Social Security Calc, how it is tested and funded, why each step of the PIA is shown, and how to report a mistake on a 2026 figure." lang={lang} jsonLd={[personSchema(lang), organizationSchema(lang), profilePageSchema({ path: route('about', lang), lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'About', path: route('about', lang) }])]} breadcrumbs={[{ label: 'About' }]}>
   <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">About {SITE_NAMES[lang]}</h1></header>
   <div class="prose prose-slate max-w-none">
     <div class="not-prose mb-6"><p class="text-lg font-semibold text-navy-900">{AUTHOR_NAME}</p><p class="text-navy-700">{AUTHOR_ROLE[lang]}</p></div>
