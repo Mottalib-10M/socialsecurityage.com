@@ -28,6 +28,8 @@ export interface Params {
   ssfa: { signed: string; public_law: string; bill: string; applies_after: string; payments_sent: number; payments_total_billion: number };
   payment_days: { days_1_10: number; days_11_20: number; days_21_31: number; legacy_day: number; legacy_before: string };
   claiming: { retroactive_months: number; withdraw_within_months: number };
+  /** Values added by later pages (each documented by a key of `sources`). */
+  extra: Record<string, any>;
   sources: Record<SourceKey, Source>;
 }
 
