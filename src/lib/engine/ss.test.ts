@@ -73,6 +73,7 @@ describe('reductions and credits', () => {
   it('SSA spouse example: PIA $1,600, 36 months early -> $600', () => expect(spousalBenefit(1600, 0, 31 * 12, 34 * 12).total).toBe(600));
   it('spouse at 62 with FRA 67 gets 32.5% of the worker PIA', () => expect(spousalBenefit(2000, 0, 62 * 12, 67 * 12).total).toBe(650));
   it('own PIA above half the worker PIA: no spousal top-up', () => expect(spousalBenefit(2000, 1200, 67 * 12, 67 * 12).onlyOwn).toBe(true));
+  it('child in care: spouse benefit alone when it pays more (POMS GN 00204.035)', () => expect(spousalBenefit(3000, 800, 62 * 12, 67 * 12, true).total).toBe(1500));
   it('child in care removes the spouse reduction', () => expect(spousalBenefit(2000, 0, 62 * 12, 67 * 12, true).total).toBe(1000));
 });
 

@@ -1,5 +1,5 @@
 {
- "_readme": "All legal parameters of the site live here, never hard-coded (RECETTE-SITE.md \u00a74). Each value was read on the cited official source on retrieved_at. ssa.gov blocks robots (Akamai 403): its tables were read in their Wayback copy of late September 2026 and cross-checked against the Federal Register notice 90 FR 49047.",
+ "_readme": "All legal parameters of the site live here, never hard-coded (RECETTE-SITE.md §4). Each value was read on the cited official source on retrieved_at. ssa.gov blocks robots (Akamai 403): its tables were read in their Wayback copy of late September 2026 and cross-checked against the Federal Register notice 90 FR 49047.",
  "year": 2026,
  "retrieved_at": "2026-10-05",
  "valid_from": "2026-01-01",
@@ -973,91 +973,91 @@
   "cfr404_211": {
    "url": "https://www.ecfr.gov/current/title-20/section-404.211",
    "label": {
-    "en": "20 CFR \u00a7 404.211, computing average indexed monthly earnings (eCFR, current to 2026-10-01)"
+    "en": "20 CFR § 404.211, computing average indexed monthly earnings (eCFR, current to 2026-10-01)"
    },
    "read": "2026-10-05"
   },
   "cfr404_212": {
    "url": "https://www.ecfr.gov/current/title-20/section-404.212",
    "label": {
-    "en": "20 CFR \u00a7 404.212, primary insurance amount from AIME (eCFR, current to 2026-10-01)"
+    "en": "20 CFR § 404.212, primary insurance amount from AIME (eCFR, current to 2026-10-01)"
    },
    "read": "2026-10-05"
   },
   "cfr404_313": {
    "url": "https://www.ecfr.gov/current/title-20/section-404.313",
    "label": {
-    "en": "20 CFR \u00a7 404.313, delayed retirement credits (eCFR, current to 2026-10-01)"
+    "en": "20 CFR § 404.313, delayed retirement credits (eCFR, current to 2026-10-01)"
    },
    "read": "2026-10-05"
   },
   "cfr404_331": {
    "url": "https://www.ecfr.gov/current/title-20/section-404.331",
    "label": {
-    "en": "20 CFR \u00a7 404.331, wife's or husband's benefits as a divorced spouse (eCFR, current to 2026-10-01)"
+    "en": "20 CFR § 404.331, wife's or husband's benefits as a divorced spouse (eCFR, current to 2026-10-01)"
    },
    "read": "2026-10-05"
   },
   "cfr404_335": {
    "url": "https://www.ecfr.gov/current/title-20/section-404.335",
    "label": {
-    "en": "20 CFR \u00a7 404.335, widow's or widower's benefits (eCFR, current to 2026-10-01)"
+    "en": "20 CFR § 404.335, widow's or widower's benefits (eCFR, current to 2026-10-01)"
    },
    "read": "2026-10-05"
   },
   "cfr404_336": {
    "url": "https://www.ecfr.gov/current/title-20/section-404.336",
    "label": {
-    "en": "20 CFR \u00a7 404.336, surviving divorced spouse (eCFR, current to 2026-10-01)"
+    "en": "20 CFR § 404.336, surviving divorced spouse (eCFR, current to 2026-10-01)"
    },
    "read": "2026-10-05"
   },
   "cfr404_403": {
    "url": "https://www.ecfr.gov/current/title-20/section-404.403",
    "label": {
-    "en": "20 CFR \u00a7 404.403, family maximum (eCFR, current to 2026-10-01)"
+    "en": "20 CFR § 404.403, family maximum (eCFR, current to 2026-10-01)"
    },
    "read": "2026-10-05"
   },
   "cfr404_409": {
    "url": "https://www.ecfr.gov/current/title-20/section-404.409",
    "label": {
-    "en": "20 CFR \u00a7 404.409, full retirement age (eCFR, current to 2026-10-01)"
+    "en": "20 CFR § 404.409, full retirement age (eCFR, current to 2026-10-01)"
    },
    "read": "2026-10-05"
   },
   "cfr404_410": {
    "url": "https://www.ecfr.gov/current/title-20/section-404.410",
    "label": {
-    "en": "20 CFR \u00a7 404.410, reduction before full retirement age (eCFR, current to 2026-10-01)"
+    "en": "20 CFR § 404.410, reduction before full retirement age (eCFR, current to 2026-10-01)"
    },
    "read": "2026-10-05"
   },
   "cfr404_430": {
    "url": "https://www.ecfr.gov/current/title-20/section-404.430",
    "label": {
-    "en": "20 CFR \u00a7 404.430, earnings test exempt amounts (eCFR, current to 2026-10-01)"
+    "en": "20 CFR § 404.430, earnings test exempt amounts (eCFR, current to 2026-10-01)"
    },
    "read": "2026-10-05"
   },
   "cfr404_621": {
    "url": "https://www.ecfr.gov/current/title-20/section-404.621",
    "label": {
-    "en": "20 CFR \u00a7 404.621, retroactive benefits (eCFR, current to 2026-10-01)"
+    "en": "20 CFR § 404.621, retroactive benefits (eCFR, current to 2026-10-01)"
    },
    "read": "2026-10-05"
   },
   "cfr404_640": {
    "url": "https://www.ecfr.gov/current/title-20/section-404.640",
    "label": {
-    "en": "20 CFR \u00a7 404.640, withdrawal of an application (eCFR, current to 2026-10-01)"
+    "en": "20 CFR § 404.640, withdrawal of an application (eCFR, current to 2026-10-01)"
    },
    "read": "2026-10-05"
   },
   "cfr404_1807": {
    "url": "https://www.ecfr.gov/current/title-20/section-404.1807",
    "label": {
-    "en": "20 CFR \u00a7 404.1807, monthly payment day (eCFR, current to 2026-10-01)"
+    "en": "20 CFR § 404.1807, monthly payment day (eCFR, current to 2026-10-01)"
    },
    "read": "2026-10-05"
   },
@@ -1092,12 +1092,470 @@
   "cfr404_802": {
    "url": "https://www.ecfr.gov/current/title-20/section-404.802",
    "label": {
-    "en": "20 CFR \u00a7 404.802, earnings record definitions and the time limit for corrections (eCFR, current to 2026-10-01)"
+    "en": "20 CFR § 404.802, earnings record definitions and the time limit for corrections (eCFR, current to 2026-10-01)"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaWorkPub": {
+   "url": "https://www.ssa.gov/pubs/EN-05-10069.pdf",
+   "label": {
+    "en": "SSA Publication 05-10069, How Work Affects Your Benefits (2026)"
+   },
+   "read": "2026-10-05"
+  },
+  "cfr404_435": {
+   "url": "https://www.ecfr.gov/current/title-20/section-404.435",
+   "label": {
+    "en": "20 CFR § 404.435, non-service months and the grace year (eCFR, current to 2026-10-01)"
+   },
+   "read": "2026-10-05"
+  },
+  "cfr404_330": {
+   "url": "https://www.ecfr.gov/current/title-20/section-404.330",
+   "label": {
+    "en": "20 CFR § 404.330, who is entitled to wife's or husband's benefits (eCFR, current to 2026-10-01)"
+   },
+   "read": "2026-10-05"
+  },
+  "pomsDeemed": {
+   "url": "https://secure.ssa.gov/poms.nsf/lnx/0200204035",
+   "label": {
+    "en": "SSA POMS GN 00204.035, Deemed filing (Bipartisan Budget Act of 2015)"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaMedicareSignup": {
+   "url": "https://www.ssa.gov/medicare/plan/when-to-sign-up",
+   "label": {
+    "en": "SSA, When to sign up for Medicare"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaStatement": {
+   "url": "https://www.ssa.gov/myaccount/statement.html",
+   "label": {
+    "en": "SSA, Get your Social Security Statement"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaAbroadPub": {
+   "url": "https://www.ssa.gov/pubs/EN-05-10137.pdf",
+   "label": {
+    "en": "SSA, Your Payments While You Are Outside the United States (Publication 05-10137, April 2026)"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaPaymentsAbroad": {
+   "url": "https://www.ssa.gov/international/payments.html",
+   "label": {
+    "en": "SSA, Social Security payments outside the United States"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaIrmaa": {
+   "url": "https://www.ssa.gov/benefits/medicare/medicare-premiums.html",
+   "label": {
+    "en": "SSA, Medicare premiums: rules for higher-income beneficiaries"
+   },
+   "read": "2026-10-05"
+  },
+  "opmHolidays": {
+   "url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+   "label": {
+    "en": "U.S. Office of Personnel Management, Federal holidays 2026 (5 U.S.C. 6103)"
+   },
+   "read": "2026-10-05"
+  },
+  "irsSeTax": {
+   "url": "https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes",
+   "label": {
+    "en": "IRS, Self-employment tax (Social Security and Medicare taxes): rules apply at any age"
+   },
+   "read": "2026-10-05"
+  },
+  "irsP15": {
+   "url": "https://www.irs.gov/publications/p15",
+   "label": {
+    "en": "IRS Publication 15 (Circular E), Employer's Tax Guide: wages taxed regardless of age or benefits"
+   },
+   "read": "2026-10-05"
+  },
+  "cfr404_285": {
+   "url": "https://www.ecfr.gov/current/title-20/section-404.285",
+   "label": {
+    "en": "20 CFR § 404.285, recomputations performed automatically (eCFR, current to 2026-10-01)"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaPiaExample": {
+   "url": "https://www.ssa.gov/oact/progdata/retirebenefit2.html",
+   "label": {
+    "en": "SSA, Primary insurance amount for cases A and B retiring in 2026 (formula and COLAs)"
+   },
+   "read": "2026-10-05"
+  },
+  "cfr404_415": {
+   "url": "https://www.ecfr.gov/current/title-20/section-404.415",
+   "label": {
+    "en": "20 CFR § 404.415, deductions because of excess earnings (eCFR, current to 2026-10-01)"
+   },
+   "read": "2026-10-05"
+  },
+  "cfr404_404": {
+   "url": "https://www.ecfr.gov/current/title-20/section-404.404",
+   "label": {
+    "en": "20 CFR § 404.404, how the family maximum reduction is shared (eCFR, current to 2026-10-01)"
+   },
+   "read": "2026-10-05"
+  },
+  "irsP505": {
+   "url": "https://www.irs.gov/publications/p505",
+   "label": {
+    "en": "IRS Publication 505 (2026), Tax Withholding and Estimated Tax: excess Social Security tax with two or more employers"
+   },
+   "read": "2026-10-05"
+  },
+  "cfr404_110": {
+   "url": "https://www.ecfr.gov/current/title-20/section-404.110",
+   "label": {
+    "en": "20 CFR § 404.110, how fully insured status is determined (eCFR, current to 2026-10-01)"
+   },
+   "read": "2026-10-05"
+  },
+  "pomsSuspension": {
+   "url": "https://secure.ssa.gov/poms.nsf/lnx/0202409100",
+   "label": {
+    "en": "SSA POMS GN 02409.100, Voluntary suspensions (Bipartisan Budget Act of 2015 rules)"
+   },
+   "read": "2026-10-05"
+  },
+  "ssaWithdraw": {
+   "url": "https://www.ssa.gov/benefits/retirement/planner/withdrawal.html",
+   "label": {
+    "en": "SSA, Cancel your benefits application (withdrawal, Form SSA-521)"
    },
    "read": "2026-10-05"
   }
  },
  "extra": {
-  "_note": "Values added page by page, each with a key in sources. Read as P.extra.<topic>."
+  "_note": "Values added page by page, each with a key in sources. Read as P.extra.<topic>.",
+  "claiming_rules": {
+   "deemed_filing_born_from": "1954-01-02",
+   "spouse_marriage_years": 1,
+   "_src": [
+    "pomsDeemed",
+    "cfr404_330"
+   ]
+  },
+  "medicare_age": {
+   "first_eligible": 65,
+   "_src": [
+    "ssaMedicareSignup"
+   ]
+  },
+  "statement": {
+   "ages_shown": 9,
+   "mailed_from_age": 60,
+   "mailed_months_before_birthday": 3,
+   "_src": [
+    "ssaStatement"
+   ]
+  },
+  "earnings_test_detail": {
+   "se_hours_not_retired_above": 45,
+   "se_hours_retired_below": 15,
+   "pub_example_benefit": 600,
+   "pub_example_earnings": 26080,
+   "_src": [
+    "ssaWorkPub",
+    "cfr404_435"
+   ]
+  },
+  "ssi_2026": {
+   "individual": 994,
+   "couple": 1491,
+   "_src": [
+    "frNotice2026"
+   ]
+  },
+  "abroad": {
+   "_source": "ssaAbroadPub, ssaPaymentsAbroad, irsP915",
+   "pub_edition": "April 2026",
+   "nonresident_effective_withholding": 0.255,
+   "switzerland_treaty_rate": 0.15,
+   "treaty_exempt": [
+    "Canada",
+    "Egypt",
+    "Germany",
+    "Ireland",
+    "Israel",
+    "Italy",
+    "Japan",
+    "Romania",
+    "United Kingdom"
+   ],
+   "india_rule": "benefits based on U.S. federal, state or local government employment paid to nationals and residents of India are exempt",
+   "outside_days_in_row": 30,
+   "noncitizen_stop_after_months": 6,
+   "restart_full_month": true,
+   "treasury_blocked": [
+    "Cuba",
+    "North Korea"
+   ],
+   "ssa_restricted": [
+    "Azerbaijan",
+    "Belarus",
+    "Kazakhstan",
+    "Kyrgyzstan",
+    "Tajikistan",
+    "Turkmenistan",
+    "Uzbekistan"
+   ],
+   "citizen_countries_all_benefits": [
+    "Austria",
+    "Belgium",
+    "Brazil",
+    "Canada",
+    "Chile",
+    "Czech Republic",
+    "Finland",
+    "France",
+    "Germany",
+    "Greece",
+    "Hungary",
+    "Iceland",
+    "Ireland",
+    "Israel",
+    "Italy",
+    "Japan",
+    "Korea (South)",
+    "Luxembourg",
+    "Netherlands",
+    "Norway",
+    "Poland",
+    "Portugal",
+    "Slovak Republic",
+    "Slovenia",
+    "Spain",
+    "Sweden",
+    "Switzerland",
+    "United Kingdom",
+    "Uruguay"
+   ],
+   "agreement_countries": [
+    "Australia",
+    "Austria",
+    "Belgium",
+    "Brazil",
+    "Canada",
+    "Chile",
+    "Czech Republic",
+    "Denmark",
+    "Finland",
+    "France",
+    "Germany",
+    "Greece",
+    "Hungary",
+    "Iceland",
+    "Ireland",
+    "Italy",
+    "Japan",
+    "Korea (South)",
+    "Luxembourg",
+    "Netherlands",
+    "Norway",
+    "Poland",
+    "Portugal",
+    "Slovak Republic",
+    "Slovenia",
+    "Spain",
+    "Sweden",
+    "Switzerland",
+    "United Kingdom",
+    "Uruguay"
+   ],
+   "list5_credits": 40,
+   "list5_years_in_us": 10,
+   "dependent_residency_years": 5,
+   "foreign_work_test_hours": 45,
+   "medicare_late_penalty_per_12_months": 0.1,
+   "switzerland_on_total_benefit": true,
+   "italy_requires_citizenship": true,
+   "green_card_no_30pct": true
+  },
+  "medicare": {
+   "_source": "cmsPartB, ssaIrmaa",
+   "part_b_2025_deductible": 257,
+   "irmaa_share_partb": 0.08,
+   "irmaa_tax_year": 2024,
+   "irmaa_partb": [
+    {
+     "single_max": 109000,
+     "joint_max": 218000,
+     "irmaa": 0.0,
+     "total": 202.9
+    },
+    {
+     "single_max": 137000,
+     "joint_max": 274000,
+     "irmaa": 81.2,
+     "total": 284.1
+    },
+    {
+     "single_max": 171000,
+     "joint_max": 342000,
+     "irmaa": 202.9,
+     "total": 405.8
+    },
+    {
+     "single_max": 205000,
+     "joint_max": 410000,
+     "irmaa": 324.6,
+     "total": 527.5
+    },
+    {
+     "single_max": 500000,
+     "joint_max": 750000,
+     "irmaa": 446.3,
+     "total": 649.2
+    },
+    {
+     "single_max": null,
+     "joint_max": null,
+     "irmaa": 487.0,
+     "total": 689.9
+    }
+   ],
+   "irmaa_partd": [
+    0.0,
+    14.5,
+    37.5,
+    60.4,
+    83.3,
+    91.0
+   ],
+   "government_share_standard": 0.75
+  },
+  "ssfa": {
+   "_source": "ssaSsfa (page last updated July 21, 2025)",
+   "affected_million": 2.8,
+   "covered_state_local_share": 0.72,
+   "adjust_start": "2025-02-25",
+   "payments_as_of": "2025-07-07",
+   "new_applications": 289715,
+   "new_applications_as_of": "2025-07-17",
+   "last_month_applied": "December 2023",
+   "first_month_free": "January 2024",
+   "some_increase_over": 1000,
+   "ahead_of_schedule_months": 5,
+   "first_new_amount": "April 2025 (for March 2025)"
+  },
+  "self_employed": {
+   "_source": "irsTc554",
+   "deduct_half_se_tax": 0.5
+  },
+  "aime_case_a": {
+   "_source": "ssaRetireExample",
+   "earnings": {
+    "1986": 16196,
+    "1987": 17283,
+    "1988": 18191,
+    "1989": 18971,
+    "1990": 19909,
+    "1991": 20715,
+    "1992": 21850,
+    "1993": 22107,
+    "1994": 22770,
+    "1995": 23755,
+    "1996": 24994,
+    "1997": 26533,
+    "1998": 28007,
+    "1999": 29657,
+    "2000": 31392,
+    "2001": 32238,
+    "2002": 32660,
+    "2003": 33558,
+    "2004": 35224,
+    "2005": 36621,
+    "2006": 38419,
+    "2007": 40281,
+    "2008": 41330,
+    "2009": 40826,
+    "2010": 41914,
+    "2011": 43354,
+    "2012": 44839,
+    "2013": 45544,
+    "2014": 47298,
+    "2015": 49085,
+    "2016": 49783,
+    "2017": 51651,
+    "2018": 53677,
+    "2019": 55848,
+    "2020": 57590,
+    "2021": 62889,
+    "2022": 66421,
+    "2023": 69560,
+    "2024": 73133,
+    "2025": 75868
+   },
+   "top35_total": 2446845,
+   "pia_unrounded": 2609.88,
+   "case_b_pia_unrounded": 3317.47
+  },
+  "awi_calc": {
+   "_source": "frNotice2026",
+   "avg_wage_2023": 63932.64,
+   "avg_wage_2024": 67027.24,
+   "pct_vs_2023": 4.84
+  },
+  "cbb_calc": {
+   "_source": "frNotice2026",
+   "base_1994": 60600,
+   "unrounded_2026": 184548.71,
+   "rounding": 300
+  },
+  "qc": {
+   "_source": "frNotice2026",
+   "amount_2025": 1810,
+   "amount_1978": 250,
+   "unrounded_2026": 1892.56,
+   "rounding": 10,
+   "pre1978_wage_per_quarter": 50,
+   "pre1978_se_per_year": 400
+  },
+  "cola_calc": {
+   "_source": "frNotice2026",
+   "cpiw_2025": {
+    "jul": 316.349,
+    "aug": 317.306,
+    "sep": 318.139
+   },
+   "fr_published": "2025-11-03",
+   "publish_by": "November 1",
+   "fund_ratio_2025_pct": 169.0,
+   "fund_ratio_floor_pct": 20.0,
+   "cpiw_q3_rounding": 0.1
+  },
+  "payment_calendar": {
+   "_source": "opmHolidays",
+   "federal_holidays_2026": [
+    "2026-01-01",
+    "2026-01-19",
+    "2026-02-16",
+    "2026-05-25",
+    "2026-06-19",
+    "2026-07-03",
+    "2026-09-07",
+    "2026-10-12",
+    "2026-11-11",
+    "2026-11-26",
+    "2026-12-25"
+   ],
+   "_rule": "20 CFR 404.1807(c)(6): a payment day on a Saturday, Sunday or Federal legal holiday moves to the first preceding day that is not one"
+  },
+  "suspension": {
+   "_source": "pomsSuspension",
+   "bba_effective": "2016-04-30"
+  }
  }
 }

@@ -181,7 +181,11 @@ export function spousalBenefit(workerPia: number, ownPia: number, claimMonths: n
   const excess = Math.max(0, floorDime(fullSpousal - ownPia));
   const monthsEarly = childInCare ? 0 : Math.max(0, fraMonths - claimMonths);
   const reducedExcess = excess > 0 ? excess - ceilDime(excess * spouseReduction(monthsEarly)) : 0;
-  return { fullSpousal, excess, reducedExcess, ownBenefit, total: floorDollar(ownBenefit + reducedExcess), monthsEarly, onlyOwn: excess === 0 };
+  const combined = floorDollar(ownBenefit + reducedExcess);
+  // With a child in care, the spouse is not deemed to file for their own benefit (POMS GN 00204.035):
+  // they may take the unreduced spouse benefit alone when it pays more.
+  if (childInCare && floorDollar(fullSpousal) > combined) return { fullSpousal, excess: fullSpousal, reducedExcess: fullSpousal, ownBenefit: 0, total: floorDollar(fullSpousal), monthsEarly: 0, onlyOwn: false };
+  return { fullSpousal, excess, reducedExcess, ownBenefit, total: combined, monthsEarly, onlyOwn: excess === 0 };
 }
 
 export interface SurvivorResult { base: number; monthsEarly: number; reductionPct: number; reduced: number; limit: number | null; benefit: number; limited: boolean }
