@@ -4,13 +4,13 @@ import { CONTACT_EMAIL, LAST_UPDATED, SITE_NAMES } from '../../data/site-config'
 import { route } from '../../i18n/routes';
 const lang = 'en';
 ---
-<PageLayout title={`Cookies on ${SITE_NAMES[lang]}: Microsoft Clarity and opt-out`} description="Which cookies this Social Security calculator sets: none from the calculators, Microsoft Clarity for audience measurement. How to verify it, how long they last and how to opt out." lang={lang} noindex={true} breadcrumbs={[{ label: 'Cookies' }]} showAuthor={false}>
+<PageLayout title={`Cookies on ${SITE_NAMES[lang]}: none set, how to check it`} description="Which cookies this Social Security calculator sets: none. Stability is monitored anonymously with Microsoft Clarity in cookie-free mode, and how to verify it in your browser." lang={lang} noindex={true} breadcrumbs={[{ label: 'Cookies' }]} showAuthor={false}>
   <div class="prose prose-slate max-w-none">
     <h1>Cookies</h1>
-    <p>This page complements the <a href={route('privacy', lang)}>privacy policy</a>.</p>
-    <h2>The calculators set none</h2><p>The claiming-age, benefit and earnings calculators run in your browser and set no cookie. The site has no advertising and no social-network button.</p>
-    <h2>Microsoft Clarity</h2><p>To learn which pages answer people’s questions, the site loads Microsoft Clarity, run by Microsoft Ireland Operations Limited. A notice tells you on your first visit and offers an opt-out. Clarity records anonymous sessions and heatmaps: pages opened, clicks, scroll depth. Your date of birth, earnings and benefit amounts are masked in the browser before anything is sent. It sets <code>_clck</code> (one year) and <code>_clsk</code> (one day); Microsoft may also set <code>MUID</code> and <code>CLID</code> on its own domains. You can see them in your browser’s developer tools, under Storage or Application.</p>
-    <h2>How to opt out</h2><p>Choose “Opt out” in the notice, or later “Cookie settings” in the footer: Clarity is then no longer loaded. That answer is kept in <code>localStorage</code> as <code>consent-choice</code>, on your device only. Clearing the site data in your browser deletes cookies already set.</p>
+    <p>This page complements the <a href={route('privacy', lang)}>privacy policy</a>. You can verify it in your browser’s developer tools, under Storage or Application.</p>
+    <h2>No cookies</h2><p>No page of the site sets a cookie, and the calculators store nothing on your device: your date of birth, earnings and benefit amounts stay in the open page and disappear when you close it. That is why there is no cookie banner: there is nothing to accept.</p>
+    <h2>Anonymous stability monitoring</h2><p>To detect broken pages, script errors, slow loading and buttons that fail, the site loads Microsoft Clarity in its cookie-free mode. Clarity then sets no cookie (no <code>_clck</code>, <code>_clsk</code>, <code>MUID</code> or <code>CLID</code>), gives every page view its own one-off identifier and does not link visits together. Page content and anything you type are masked before data is sent.</p>
+    <h2>Blocking it</h2><p>Blocking the clarity.ms domain, or using a content blocker, stops this monitoring too; the calculators work just the same.</p>
     <p>Questions: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Updated: {LAST_UPDATED}.</p>
   </div>
 </PageLayout>
