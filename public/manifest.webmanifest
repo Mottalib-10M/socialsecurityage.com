@@ -1,6 +1,6 @@
 {
- "name": "Social Security Calc",
- "short_name": "Social Security Calc",
+ "name": "Social Security Age",
+ "short_name": "SS Age",
  "description": "Social Security calculator for 2026: the primary insurance amount computed step by step from wage-indexed earnings, and the best age to claim between 62 and 70.",
  "start_url": "/en/",
  "display": "standalone",

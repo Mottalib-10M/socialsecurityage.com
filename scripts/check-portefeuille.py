@@ -22,7 +22,7 @@ SORTIES = ('dist', 'out', 'build', 'docs', 'output', '_site', 'www')
 SEUIL = 0.4
 # Pages légales : adresse de l'hébergeur, clauses de CGU et mentions sont identiques
 # par nature et ne comptent pas pour Google ; les inclure noierait les vraies copies.
-LEGAL = re.compile(r'/(terms|terms-of-service|terms-of-use|privacy|privacy-policy|cookies?|legal|legal-notice|disclaimer|mentions-legales|confidentialite|cgu|impressum|datenschutz|agb|aviso-legal|privacidad|termini|note-legali|voorwaarden|vilkar|villkor|personvern|integritet|termos|privacidade)(/|\.html|$)', re.I)
+LEGAL = re.compile(r'/(terms|terms-of-service|terms-of-use|privacy|privacy-policy|cookies?|legal|legal-notice|disclaimer|mentions-legales|confidentialite|cgu|impressum|datenschutz|agb|aviso-legal|privacidad|termini|note-legali|voorwaarden|vilkar|villkor|personvern|integritet|termos|privacidade|kayttoehdot|tietosuoja|evasteet)(/|\.html|$)', re.I)
 
 
 def sortie_de(site: Path):

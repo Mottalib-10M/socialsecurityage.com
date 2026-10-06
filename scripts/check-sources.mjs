@@ -16,6 +16,7 @@ import { join, resolve, basename } from 'node:path';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 const run = promisify(execFile);
+const NAV_UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36';
 
 const site = process.argv[2];
 if (!site) { console.error('usage: check-sources.mjs <site-dir>'); process.exit(2); }
@@ -66,7 +67,17 @@ const check = async (u, essai = 1) => {
     // 406 : refus du client robot (uber.com, 2026-10-04 : 406 au script, 200 dans un navigateur).
     if (r.status === 403 || r.status === 406 || r.status === 429) blocked.push(`${r.status} ${u}`);
     else if (r.status >= 500) { if (essai < 2) return check(u, 2); down.push(`${r.status} ${u}`); }
-    else if (r.status >= 400) dead.push(`${r.status} ${u}`);
+    else if (r.status >= 400) {
+      // 404 au robot, 200 au navigateur : tax.ohio.gov renvoie 404 à tout client qui ne se présente
+      // pas comme un navigateur (9 pages vivantes signalées mortes, taxratesbystate.com, 2026-10-06).
+      // Avant de déclarer une page morte, on la redemande avec l'identité d'un navigateur.
+      try {
+        const { stdout } = await run('curl', ['-s', '-o', '/dev/null', '-w', '%{http_code}', '-L', '-m', '30', '-A', NAV_UA, '-H', 'Accept: text/html,application/pdf', u]);
+        const s = +stdout;
+        if (s >= 200 && s < 400) return void blocked.push(`${r.status} au robot, ${s} au navigateur ${u}`);
+      } catch {}
+      dead.push(`${r.status} ${u}`);
+    }
     else if (NOT_FOUND.test(body.replace(/<[^>]+>/g, ' '))) dead.push(`200 mais « introuvable » ${u}`);
   } catch (e) {
     // Chaîne de certificats incomplète côté serveur (Missouri Botanical Garden, 2026-10-04) : Node

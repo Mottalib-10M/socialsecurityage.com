@@ -52,7 +52,8 @@ PRIMAIRES = None  # renseigne plus bas, une fois `_sources_primaires` definie
 
 # Pages de service : pas de cible de longueur (plan §2.2, lignes 5 à 8).
 SERVICE = re.compile(
-    r'/[a-z-]*(faq|questions|preguntas|veelgestelde|haeufige|about|a-propos|ueber-uns|over-ons|'
+    # Finnois (fi-laskurit, 2026-10-05)
+    r'/[a-z-]*(tietoa|laskentatapa|yhteystiedot|toimitusperiaatteet|tietosuoja|kayttoehdot|evasteet|upota-laskuri|faq|questions|preguntas|veelgestelde|haeufige|about|a-propos|ueber-uns|over-ons|'
     r'sobre-nosotros|sobre(?=/|$)|methodology|methodik|methodologie|methode|metodologia|method|widget|'
     # pages légales : ni cible de longueur ni sources officielles (même liste que check-trame)
     # « disclaimer » : page de confiance comme les mentions légales. Lui imposer
@@ -162,6 +163,8 @@ OFFICIAL = re.compile(
     # Golfe : u.ae est le portail officiel du gouvernement fédéral des Émirats,
     # au même titre que service-public.fr, mais son domaine ne contient pas « gov ».
     r'|u\.ae/|mohre\.gov\.ae|dha\.gov\.ae|doh\.gov\.ae|mohap\.gov\.ae'
+    # Finlande (fi-laskurit, 2026-10-05) : Verohallinto, Kela, Finlex, Eläketurvakeskus, Työeläke.fi, TYJ, Työsuojelu, Tilastokeskus
+    r'|vero\.fi|kela\.fi|finlex\.fi|etk\.fi|tyoelake\.fi|tyj\.fi|tyosuojelu\.fi|stat\.fi|suomi\.fi'
     r')[a-z0-9./_?=&#-]*', re.I)
 
 # La liste ci-dessus est celle des administrations : elle suppose que le sujet du

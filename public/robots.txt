@@ -3,4 +3,4 @@ Allow: /
 
 Disallow: /*?*
 
-Sitemap: https://us-social-security.example/sitemap-index.xml
+Sitemap: https://socialsecurityage.com/sitemap-index.xml

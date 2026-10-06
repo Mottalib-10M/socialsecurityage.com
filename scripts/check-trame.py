@@ -74,19 +74,21 @@ SERVICE = re.compile(
     r'vilkar|vilkaar|informasjonskapsler|woordenlijst|redactie|'
     # Polonais (kalkulatorwynagrodzen.pl, 2026-10-03)
     r'o-nas|regulamin|polityka-prywatnosci|polityka-redakcyjna|slownik|'
+    # Finnois (fi-laskurit, 2026-10-05)
+    r'tietoa|laskentatapa|yhteystiedot|toimitusperiaatteet|tietosuoja|kayttoehdot|evasteet|upota-laskuri|'
     # Espagnol et italien (calcularsueldoneto.mx, aliquoteimu.it, 2026-10-03)
     r'glosario|domande-frequenti)', re.I)
 
 # Liens que le pied de page doit porter sur toutes les pages (§8.4 identité
 # légale, §12). On accepte n'importe laquelle des variantes linguistiques.
 FOOTER_LINKS = {
-    'legal':   r'(impressum|mentions-legales|aviso-legal|legal-notice|colofon|legal|'
+    'legal':   r'(kayttoehdot|impressum|mentions-legales|aviso-legal|legal-notice|colofon|legal|'
                r'terms|conditions|voorwaarden|disclaimer|villkor|betingelser|vilkar|vilkaar|regulamin|nota-prawna)',
-    'privacy': r'(datenschutz|privacy|confidentialite|confidentialidade|privacidad|'
+    'privacy': r'(tietosuoja|datenschutz|privacy|confidentialite|confidentialidade|privacidad|'
                r'privacidade|protection-donnees|gegevensbescherming|persondata|personvern|'
                r'integritetspolicy|privatliv|polityka-prywatnosci)',
-    'about':   r'(about|a-propos|ueber-uns|over-ons|sobre|chi-siamo|om-os|om-oss|o-nas)',
-    'method':  r'(method|methode|methodik|methodologie|metodolog|metod|metode)',
+    'about':   r'(tietoa|about|a-propos|ueber-uns|over-ons|sobre|chi-siamo|om-os|om-oss|o-nas)',
+    'method':  r'(laskentatapa|method|methode|methodik|methodologie|metodolog|metod|metode)',
 }
 
 # §10.1 — réglages par défaut de Tailwind et des bibliothèques de composants.
@@ -114,7 +116,9 @@ DISCLAIMER = re.compile(
     # Polonais : « wyniki mają charakter szacunkowy », « nie stanowi doradztwa podatkowego »
     r'charakter szacunkow|nie stanowi\w* doradztw|to nie jest doradztwo|'
     # Grec (ypologismosmisthou.gr, 2026-10-03) : « ενδεικτικοί υπολογισμοί », « δεν αποτελούν συμβουλή ».
-    r'ενδεικτικ|δεν αποτελ)', re.I)
+    r'ενδεικτικ|δεν αποτελ|'
+    # Finnois (fi-laskurit, 2026-10-05) : « tulokset ovat arvioita », « ei korvaa verokorttia ».
+    r'arvio|ei korvaa|eivätkä ne korvaa)', re.I)
 
 ISO_DATE = re.compile(r'\b20\d{2}-\d{2}-\d{2}\b')
 # La date de mise à jour est désormais écrite dans la langue du site

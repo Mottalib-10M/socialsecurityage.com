@@ -1,6 +1,6 @@
 /** Configuration centrale du site (générée par new-site.py). */
-export const SITE_URL = "https://us-social-security.example";
-export const SITE_NAMES: Record<string, string> = {"en": "Social Security Calc"};
+export const SITE_URL = "https://socialsecurityage.com";
+export const SITE_NAMES: Record<string, string> = {"en": "Social Security Age"};
 export const LANG_TAGS: Record<string, string> = {"en": "en-US"};
 export const OG_LOCALES: Record<string, string> = {"en": "en_US"};
 export const LOCALE_TAG = 'en-US';
@@ -16,7 +16,7 @@ export const AUTHOR_DESC: Record<string, string> = {"en": "Radif Partners runs t
  *  themes reellement traites par le site, pas une liste de mots-cles : un sujet
  *  declare ici sans page qui le couvre est une declaration fausse. */
 export const KNOWS_ABOUT: Record<string, string[]> = {"en": ["Social Security retirement benefits", "Primary insurance amount and AIME", "Full retirement age and claiming age", "Spousal and survivor benefits", "Taxation of Social Security benefits", "Retirement earnings test"]};
-export const CONTACT_EMAIL = "contact@us-social-security.example";
+export const CONTACT_EMAIL = "contact@socialsecurityage.com";
 export const THEME_COLOR = '#3C3B6E';
 export const LOGO_SYMBOL = 'SS';
 export const BING_VERIFY_CODE = '';
