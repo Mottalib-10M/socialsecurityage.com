@@ -26,7 +26,10 @@ import { consentStrings } from '../data/consent-strings';
 interface Props { lang: string }
 const { lang } = Astro.props;
 
-const s = consentStrings(lang);
+const s0 = consentStrings(lang);
+const s = CONSENT_MODE === 'opt-in'
+  ? { ...s0, body: s0.bodyOptIn ?? s0.body, reject: s0.rejectOptIn ?? s0.reject }
+  : s0;
 const cookiesHref = route('cookies', lang as never);
 ---
 {(GA4_ID || CLARITY_ID) && CONSENT_MODE !== 'none' && (

@@ -5,6 +5,8 @@
  */
 export interface ConsentStrings {
   title: string; body: string; accept: string; reject: string; more: string; manage: string;
+  /** Variante du texte et du refus en régime 'opt-in' (rien avant l'accord), quand `body` décrit le régime 'notice'. */
+  bodyOptIn?: string; rejectOptIn?: string;
 }
 
 export const CONSENT_STRINGS: Record<string, ConsentStrings> = {
@@ -47,7 +49,8 @@ export const CONSENT_STRINGS: Record<string, ConsentStrings> = {
   en: {
     title: 'Cookies and analytics',
     body: 'The calculator runs entirely in your browser and needs no cookies. We use analytics only to see which pages are useful. You can change your choice at any time.',
-    accept: 'Accept', reject: 'Opt out', more: 'Learn more',
+    bodyOptIn: 'The calculator runs entirely in your browser and needs no cookies. We would like to measure which pages are useful; nothing is loaded or stored unless you accept.',
+    accept: 'Accept', reject: 'Opt out', rejectOptIn: 'Decline', more: 'Learn more',
     manage: 'Cookie settings',
   },
 };
