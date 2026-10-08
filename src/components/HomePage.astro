@@ -42,6 +42,7 @@ const yearRows = years.map((y) => { const f = fraRetirement(y); const id = `born
 const salaries = [20000, 35000, 50000, 75000, 100000, 150000];
 const salRows = salaries.map((s) => { const b = { y: 1964, m: 6, d: 15 }; const r = computePia(b, projectCareer(b, s, 22, 62)); return { s, id: `salary-${s}`, aime: r.aime, pia: r.pia, a62: benefitAtAge(r.pia, 62 * 12 + 1, 67 * 12).benefit, a70: benefitAtAge(r.pia, 840, 67 * 12).benefit }; });
 const cases = PAGES.filter((p) => p.group === 'family' || p.group === 'taxwork');
+const around = PAGES.filter((p) => p.group === 'retirement');
 const parts = x.body(h).split(/<!--mini:([A-Za-z0-9_]+)-->/);
 ---
 <PageLayout title={x.title} description={x.description} lang={lang} jsonLd={jsonLd} faqs={x.faqs} sources={sources}>
@@ -86,6 +87,14 @@ const parts = x.body(h).split(/<!--mini:([A-Za-z0-9_]+)-->/);
     <section class="mt-12" aria-labelledby="cases">
       <h2 id="cases" class="text-2xl font-bold text-navy-900">Situations that change the math</h2>
       <ul class="mt-4 grid gap-x-8 gap-y-3 sm:grid-cols-2">{cases.map((p) => <li class="border-l-2 border-accent-300 pl-3"><a class="font-semibold text-accent-700 underline" href={route(p.id, lang)}>{p.en.nav}</a><span class="block text-sm text-navy-700">{p.en.card}</span></li>)}</ul>
+    </section>
+  )}
+
+  {around.length > 0 && (
+    <section class="mt-12" aria-labelledby="around">
+      <h2 id="around" class="text-2xl font-bold text-navy-900">Medicare, IRAs and health cover around retirement</h2>
+      <p class="mt-2 text-navy-700">The check is only part of the budget. These calculators handle what usually arrives in the same years: Medicare surcharges, required withdrawals, conversions, the HSA and the gap before 65.</p>
+      <ul class="mt-4 grid gap-x-8 gap-y-3 sm:grid-cols-2">{around.map((p) => <li class="border-l-2 border-accent-300 pl-3"><a class="font-semibold text-accent-700 underline" href={route(p.id, lang)}>{p.en.nav}</a><span class="block text-sm text-navy-700">{p.en.card}</span></li>)}</ul>
     </section>
   )}
 

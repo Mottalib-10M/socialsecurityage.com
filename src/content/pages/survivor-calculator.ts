@@ -19,15 +19,15 @@ export default definePage({
   group: 'tools',
   order: 50,
   tool: 'survivor',
-  related: ['surviving-divorced-spouse', 'spousal-calculator', 'when-to-claim', 'claiming-at-70', 'full-retirement-age'],
+  related: ['surviving-divorced-spouse', 'spousal-calculator', 'when-to-claim', 'claiming-at-70', 'inherited-ira', 'irmaa'],
   sources: ['cfr404_410', 'poms615320', 'cfr404_335', 'ssaSurvivor', 'pomsDeemed', 'ssaWhileWorking'],
   en: {
     slug: 'survivor-benefits-calculator',
     nav: 'Survivor benefits',
     card: `From ${pc(1 - P.reduction.widow_max)} of the deceased's benefit at 60 to 100% at survivor full retirement age, with the ${pc(F.widow_limit)} floor.`,
-    title: `Survivor Benefits 2026: ${pc(1 - P.reduction.widow_max)} at 60, 100% at Full Age`,
+    title: `Social Security Survivor Benefits 2026: ${pc(1 - P.reduction.widow_max)} at Age 60`,
     description: `Social Security survivor benefits in 2026: ${pc(1 - P.reduction.widow_max)} of the deceased's benefit at 60, 100% at survivor full retirement age, ${pc(F.widow_limit)} floor if they claimed early.`,
-    h1: 'Survivor benefits calculator for widows and widowers',
+    h1: 'Social Security survivor benefits calculator for widows and widowers',
     intro: `Enter the PIA of the spouse who died, when they started, and when you want to start: the tool applies the age reduction and the ${pc(F.widow_limit)} limit.`,
     resume: `A widow or widower can receive up to 100% of what the deceased spouse was entitled to, from age ${P.reduction.widow_earliest_age} (50 if disabled). At ${P.reduction.widow_earliest_age} the benefit is ${pc(1 - P.reduction.widow_max)} of that amount; the ${pc(P.reduction.widow_max)} cut shrinks month by month and disappears at the survivor full retirement age, 67 for survivors born in 1962 or later. With a deceased PIA of ${$(D)}, that is ${$(at60.benefit)} at 60 and ${$(full.benefit)} at 67. If the deceased had waited to 70, the survivor inherits the delayed credits: ${$(late.benefit)}. If the deceased had started at 62, the RIB-LIM rule caps the survivor at the larger of the deceased's reduced check, ${$(deadEarly)}, or ${pc(F.widow_limit)} of the PIA: ${$(early.benefit)}. The marriage must have lasted ${F.widow_marriage_months} months, remarrying after ${F.widow_remarriage_age} keeps the benefit, and because deemed filing does not apply to survivor benefits, you can start one benefit and switch to the other later.`,
     faqs: [
@@ -53,6 +53,9 @@ ${h.table(['Survivor starts at', 'Deceased had not started', 'Deceased started a
 
 <h2>Switching between survivor and own benefits</h2>
 <p>Retirement and spouse benefits are tied by ${h.src('pomsDeemed', 'deemed filing')}, but survivor benefits are not. A widow or widower who also has an own record can take one first and the other later. With an own PIA of ${h.usd(OWN)} and the ${h.usd(D)} record above, two orders are possible: the survivor benefit from 60, ${h.usd(at60.benefit)}, then the own benefit at 70, ${h.usd(own70)}; or the own benefit at 62, ${h.usd(own62)}, then the full survivor benefit at 67, ${h.usd(full.benefit)}. You are never paid both in full: when entitled to two, you receive the larger. The ${h.src('ssaSurvivor', 'SSA survivor page')} describes the switch.</p>
+
+<h2>Two other bills the death changes</h2>
+<p>The survivor benefit is rarely the only money question in the first year. The first tax return filed alone uses the single Medicare income bands, half the joint ones, so a widow with unchanged investment income can move up the ${h.a('irmaa', 'IRMAA scale')}; the death of a spouse is one of the events that lets the SSA use a newer, lower income. And an IRA left by the spouse can be rolled into the survivor's own IRA or kept as an inherited account, a choice explained on the ${h.a('inherited-ira', 'inherited IRA page')}.</p>
 
 <h2>Conditions the tool assumes</h2>
 <p>It treats you as a widow or widower married at least ${F.widow_marriage_months} months (${h.src('cfr404_335', '20 CFR 404.335')}), not remarried before ${F.widow_remarriage_age}, and not disabled. A former spouse married 10 years or more follows the rules on the ${h.a('surviving-divorced-spouse', 'surviving divorced spouse page')}. Children of the deceased receive their own benefits, usually ${h.pct(F.child_survivor, 0)} of the PIA each, within the ${h.a('family-maximum', 'family maximum')}. A lump-sum death payment of ${h.usd(F.lump_sum_death)} also goes to a spouse or to certain children.</p>`;

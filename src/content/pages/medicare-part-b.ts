@@ -19,7 +19,7 @@ export default definePage({
   group: 'taxwork',
   order: 30,
   mini: 'medNetDeposit',
-  related: ['cola-2026', 'payment-schedule', 'average-benefit', 'tax-calculator', 'ssfa'],
+  related: ['cola-2026', 'payment-schedule', 'average-benefit', 'tax-calculator', 'ssfa', 'irmaa'],
   sources: ['cmsPartB', 'ssaIrmaa', 'frNotice2026', 'ssaSnapshot', 'ssaSsfa', 'ssaAbroadPub'],
   en: {
     slug: 'medicare-premium-deducted-from-social-security',
@@ -53,7 +53,7 @@ ${h.table(['Monthly benefit', 'Part B premium', 'Deposit', 'Deposit with 10% tax
 <p>The fourth column adds one common choice: voluntary federal tax withholding. The SSA offers ${P.taxation.withholding_options.map((x) => `${Math.round(x * 100)}%`).join(', ')} of the monthly benefit. Withholding is optional and is computed on the benefit, not on the deposit; the ${h.a('tax-calculator', 'tax calculator')} shows whether any of your benefit is taxable at all.</p>
 
 <h2>Higher incomes: the income-related adjustment</h2>
-<p>About ${Math.round(X.irmaa_share_partb * 100)}% of people with Part B pay more than the standard premium. For most beneficiaries the government pays about ${Math.round(X.government_share_standard * 100)}% of the cost of Part B; higher-income beneficiaries pay a larger share, and the ${h.src('ssaIrmaa', 'SSA')} collects the difference by withholding it from benefits. The 2026 amounts, from CMS:</p>
+<p>About ${Math.round(X.irmaa_share_partb * 100)}% of people with Part B pay more than the standard premium. For most beneficiaries the government pays about ${Math.round(X.government_share_standard * 100)}% of the cost of Part B; higher-income beneficiaries pay a larger share, and the ${h.src('ssaIrmaa', 'SSA')} collects the difference by withholding it from benefits. The 2026 amounts, from CMS, are below; the ${h.a('irmaa', 'IRMAA calculator')} applies them to your own income, filing status and household:</p>
 ${h.table(['Single filers, MAGI', 'Joint filers, MAGI', 'Part B adjustment', 'Part B total', 'Part D adjustment'], irmaa, `2026 monthly amounts, full Part B coverage; MAGI from the tax year ${X.irmaa_tax_year} return. Each band starts just above the previous limit`, ['l', 'l', 'r', 'r', 'r'])}
 <p>Married people who lived with their spouse during the year but file separately follow a shorter scale in the CMS table, with the top two amounts applying from ${h.usd(T[0].single_max as number)}. Modified adjusted gross income here means adjusted gross income plus tax-exempt interest. A retiree with a single return showing ${h.usd(150000)} of MAGI falls in the third band and pays ${h.usd(T[2].total, 2)} a month for Part B, ${h.usd(T[2].irmaa, 2)} more than the standard premium; on a ${h.usd(3500)} benefit the deposit is ${h.usd(3500 - T[2].total - X.irmaa_partd[2], 2)} once the Part D adjustment of ${h.usd(X.irmaa_partd[2], 2)} is also withheld.</p>
 

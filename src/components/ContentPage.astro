@@ -31,6 +31,8 @@ const x = page.en;
 const ui = t(lang);
 const path = route(page.id, lang);
 const parts = x.body(helpers()).split(/<!--mini:([A-Za-z0-9_]+)-->/);
+// Folded page: every chunk between two mini-calculators is cut at its <h2>; each section becomes a closed <details>.
+const sectionsOf = (html: string) => html.split(/(?=<h2[\s>])/).map((seg) => { const m = seg.match(/^<h2[^>]*>([\s\S]*?)<\/h2>([\s\S]*)$/); return m ? { title: m[1], html: m[2] } : { title: null as string | null, html: seg }; }).filter((x) => x.title !== null || x.html.trim());
 const jsonLd = [articleSchema({ title: x.h1, description: x.description, path, lang }), webPageSchema({ name: x.h1, description: x.description, path, lang }), breadcrumbSchema([{ name: ui.breadcrumbHome, path: route('home', lang) }, { name: x.nav, path }])];
 if (page.tool) jsonLd.push(webApplicationSchema({ name: x.h1, description: x.description, path, lang }));
 if (x.faqs.length) jsonLd.push(faqSchema(x.faqs, lang));
@@ -59,14 +61,27 @@ const miniHref = page.miniHref && ROUTES.some((r) => r.id === page.miniHref) ? r
           {page.tool === 'earnings' && <EarningsTool client:load />}
         </div>
       </>
+    ) : page.fold ? (
+      <>
+        <Clamp text={x.resume} lang={lang} id={`clamp-${page.id}`} class="mb-6" />
+        {page.mini && <MiniSim client:load kind={page.mini} lang={lang} href={miniHref} />}
+      </>
     ) : (
       <>
         <p class="mb-6 text-navy-800">{x.resume}</p>
         {page.mini && <MiniSim client:load kind={page.mini} lang={lang} href={miniHref} />}
       </>
     )}
-    <div class="prose prose-slate max-w-none">
-      {parts.map((p, i) => i % 2 === 0 ? <Fragment set:html={p} /> : <MiniSim client:load kind={p} lang={lang} href={miniHref} />)}
-    </div>
+    {page.fold ? (
+      <div class="fold-body mt-8">
+        {parts.map((p, i) => i % 2 === 1 ? <MiniSim client:load kind={p} lang={lang} href={miniHref} /> : sectionsOf(p).map((sec) => sec.title === null
+          ? <div class="prose prose-slate max-w-none" set:html={sec.html} />
+          : <details class="fold-sec"><summary><h2 set:html={sec.title} /></summary><div class="prose prose-slate max-w-none" set:html={sec.html} /></details>))}
+      </div>
+    ) : (
+      <div class="prose prose-slate max-w-none">
+        {parts.map((p, i) => i % 2 === 0 ? <Fragment set:html={p} /> : <MiniSim client:load kind={p} lang={lang} href={miniHref} />)}
+      </div>
+    )}
   </article>
 </PageLayout>

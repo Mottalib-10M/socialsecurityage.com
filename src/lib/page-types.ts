@@ -6,7 +6,7 @@
  */
 import type { SourceKey, Params } from './engine/params';
 
-export type Group = 'tools' | 'claiming' | 'formula' | 'family' | 'taxwork' | 'birthyear' | 'salary';
+export type Group = 'tools' | 'claiming' | 'formula' | 'family' | 'taxwork' | 'retirement' | 'birthyear' | 'salary';
 export type ToolKind = 'record' | 'claiming' | 'fra' | 'spouse' | 'survivor' | 'tax' | 'earnings';
 export interface FAQ { q: string; a: string }
 
@@ -57,6 +57,9 @@ export interface PageDef {
   /** Page the mini-calculator button points to (default: home calculator). */
   miniHref?: string;
   tool?: ToolKind;
+  /** Folded layout (RECETTE §26, 2026-10-02): lead clamped to its first sentence, each H2 section in a closed <details>;
+   *  mini-calculators placed between sections stay visible. Everything remains in the served HTML. */
+  fold?: boolean;
   related: string[];
   sources: SourceKey[];
   en: PageText;

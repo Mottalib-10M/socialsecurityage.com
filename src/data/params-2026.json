@@ -1235,6 +1235,125 @@
     "en": "SSA, Cancel your benefits application (withdrawal, Form SSA-521)"
    },
    "read": "2026-10-05"
+  },
+  "cfr418": {
+   "url": "https://www.ecfr.gov/current/title-20/chapter-III/part-418/subpart-B",
+   "label": {
+    "en": "20 CFR part 418, subpart B: Medicare Part B income-related monthly adjustment amount (eCFR)"
+   },
+   "read": "2026-10-08"
+  },
+  "ssa44": {
+   "url": "https://www.ssa.gov/forms/ssa-44.pdf",
+   "label": {
+    "en": "SSA-44, Medicare Income-Related Monthly Adjustment Amount: Life-Changing Event"
+   },
+   "read": "2026-10-08"
+  },
+  "cfr1_401a9_9": {
+   "url": "https://www.ecfr.gov/current/title-26/section-1.401(a)(9)-9",
+   "label": {
+    "en": "26 CFR 1.401(a)(9)-9: Single Life Table and Uniform Lifetime Table (eCFR)"
+   },
+   "read": "2026-10-08"
+  },
+  "frRmd2024": {
+   "url": "https://www.federalregister.gov/documents/2024/07/19/2024-14542/required-minimum-distributions",
+   "label": {
+    "en": "Treasury Decision 10001, Required Minimum Distributions, final regulations, 89 FR 58886 (July 19, 2024)"
+   },
+   "read": "2026-10-08"
+  },
+  "frRmd1959": {
+   "url": "https://www.federalregister.gov/documents/2024/07/19/2024-14543/required-minimum-distributions",
+   "label": {
+    "en": "IRS proposed regulations, Required Minimum Distributions, applicable age for people born in 1959, 89 FR 58644 (July 19, 2024)"
+   },
+   "read": "2026-10-08"
+  },
+  "irsRmdFaq": {
+   "url": "https://www.irs.gov/retirement-plans/retirement-plan-and-ira-required-minimum-distributions-faqs",
+   "label": {
+    "en": "IRS, Retirement plan and IRA required minimum distributions FAQs (reviewed January 29, 2026)"
+   },
+   "read": "2026-10-08"
+  },
+  "irsN2435": {
+   "url": "https://www.irs.gov/pub/irs-drop/n-24-35.pdf",
+   "label": {
+    "en": "IRS Notice 2024-35, relief for missed 10-year-rule distributions, 2021 to 2024"
+   },
+   "read": "2026-10-08"
+  },
+  "irsP590b": {
+   "url": "https://www.irs.gov/publications/p590b",
+   "label": {
+    "en": "IRS Publication 590-B (2025), Distributions from Individual Retirement Arrangements"
+   },
+   "read": "2026-10-08"
+  },
+  "irsP590a": {
+   "url": "https://www.irs.gov/publications/p590a",
+   "label": {
+    "en": "IRS Publication 590-A (2025), Contributions to Individual Retirement Arrangements: conversions"
+   },
+   "read": "2026-10-08"
+  },
+  "irsInflation2026": {
+   "url": "https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill",
+   "label": {
+    "en": "IRS, IR-2025-103: tax inflation adjustments for tax year 2026 (October 9, 2025)"
+   },
+   "read": "2026-10-08"
+  },
+  "irsRp2532": {
+   "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+   "label": {
+    "en": "IRS Revenue Procedure 2025-32: 2026 tax rate tables and standard deduction"
+   },
+   "read": "2026-10-08"
+  },
+  "irsRp2519": {
+   "url": "https://www.irs.gov/pub/irs-drop/rp-25-19.pdf",
+   "label": {
+    "en": "IRS Revenue Procedure 2025-19: 2026 HSA contribution limits and HDHP thresholds"
+   },
+   "read": "2026-10-08"
+  },
+  "irsP969": {
+   "url": "https://www.irs.gov/publications/p969",
+   "label": {
+    "en": "IRS Publication 969 (2025), Health Savings Accounts and Other Tax-Favored Health Plans"
+   },
+   "read": "2026-10-08"
+  },
+  "cfr42_406_6": {
+   "url": "https://www.ecfr.gov/current/title-42/section-406.6",
+   "label": {
+    "en": "42 CFR 406.6: application for Medicare Part A, retroactive up to 6 months (eCFR)"
+   },
+   "read": "2026-10-08"
+  },
+  "dolCobra": {
+   "url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/cobra-continuation-health-coverage-workers",
+   "label": {
+    "en": "US Department of Labor, EBSA: COBRA continuation coverage FAQs for workers"
+   },
+   "read": "2026-10-08"
+  },
+  "healthcareCobra": {
+   "url": "https://www.healthcare.gov/unemployed/cobra-coverage/",
+   "label": {
+    "en": "HealthCare.gov, COBRA coverage and the Marketplace"
+   },
+   "read": "2026-10-08"
+  },
+  "medicareStart": {
+   "url": "https://www.medicare.gov/basics/get-started-with-medicare/sign-up/when-does-medicare-coverage-start",
+   "label": {
+    "en": "Medicare.gov, When does Medicare coverage start (COBRA and the Part B Special Enrollment Period)"
+   },
+   "read": "2026-10-08"
   }
  },
  "extra": {
@@ -1556,6 +1675,329 @@
   "suspension": {
    "_source": "pomsSuspension",
    "bba_effective": "2016-04-30"
+  },
+  "irmaa2026": {
+   "_source": "cmsPartB, cfr418",
+   "tax_year": 2024,
+   "single": [
+    109000,
+    137000,
+    171000,
+    205000,
+    500000
+   ],
+   "joint": [
+    218000,
+    274000,
+    342000,
+    410000,
+    750000
+   ],
+   "mfs": [
+    109000,
+    391000
+   ],
+   "mfs_tiers": [
+    0,
+    4,
+    5
+   ],
+   "partb_irmaa": [
+    0,
+    81.2,
+    202.9,
+    324.6,
+    446.3,
+    487.0
+   ],
+   "partd_irmaa": [
+    0,
+    14.5,
+    37.5,
+    60.4,
+    83.3,
+    91.0
+   ],
+   "partb_standard": 202.9,
+   "partb_deductible": 283,
+   "parta_deductible": 1736,
+   "share_paying": 0.08,
+   "_note": "Single scale also applies to head of household, qualifying surviving spouse, and married filing separately when the spouses lived apart all year (20 CFR 418.1115(b)). Upper bounds are inclusive except the top bound of tier 5 (less than 500,000 / 750,000 / 391,000)."
+  },
+  "rmd": {
+   "_source": "cfr1_401a9_9, frRmd2024, frRmd1959, irsRmdFaq, irsN2435",
+   "uniform": {
+    "72": 27.4,
+    "73": 26.5,
+    "74": 25.5,
+    "75": 24.6,
+    "76": 23.7,
+    "77": 22.9,
+    "78": 22.0,
+    "79": 21.1,
+    "80": 20.2,
+    "81": 19.4,
+    "82": 18.5,
+    "83": 17.7,
+    "84": 16.8,
+    "85": 16.0,
+    "86": 15.2,
+    "87": 14.4,
+    "88": 13.7,
+    "89": 12.9,
+    "90": 12.2,
+    "91": 11.5,
+    "92": 10.8,
+    "93": 10.1,
+    "94": 9.5,
+    "95": 8.9,
+    "96": 8.4,
+    "97": 7.8,
+    "98": 7.3,
+    "99": 6.8,
+    "100": 6.4,
+    "101": 6.0,
+    "102": 5.6,
+    "103": 5.2,
+    "104": 4.9,
+    "105": 4.6,
+    "106": 4.3,
+    "107": 4.1,
+    "108": 3.9,
+    "109": 3.7,
+    "110": 3.5,
+    "111": 3.4,
+    "112": 3.3,
+    "113": 3.1,
+    "114": 3.0,
+    "115": 2.9,
+    "116": 2.8,
+    "117": 2.7,
+    "118": 2.5,
+    "119": 2.3,
+    "120": 2.0
+   },
+   "single": {
+    "0": 84.6,
+    "1": 83.7,
+    "2": 82.8,
+    "3": 81.8,
+    "4": 80.8,
+    "5": 79.8,
+    "6": 78.8,
+    "7": 77.9,
+    "8": 76.9,
+    "9": 75.9,
+    "10": 74.9,
+    "11": 73.9,
+    "12": 72.9,
+    "13": 71.9,
+    "14": 70.9,
+    "15": 69.9,
+    "16": 69.0,
+    "17": 68.0,
+    "18": 67.0,
+    "19": 66.0,
+    "20": 65.0,
+    "21": 64.1,
+    "22": 63.1,
+    "23": 62.1,
+    "24": 61.1,
+    "25": 60.2,
+    "26": 59.2,
+    "27": 58.2,
+    "28": 57.3,
+    "29": 56.3,
+    "30": 55.3,
+    "31": 54.4,
+    "32": 53.4,
+    "33": 52.5,
+    "34": 51.5,
+    "35": 50.5,
+    "36": 49.6,
+    "37": 48.6,
+    "38": 47.7,
+    "39": 46.7,
+    "40": 45.7,
+    "41": 44.8,
+    "42": 43.8,
+    "43": 42.9,
+    "44": 41.9,
+    "45": 41.0,
+    "46": 40.0,
+    "47": 39.0,
+    "48": 38.1,
+    "49": 37.1,
+    "50": 36.2,
+    "51": 35.3,
+    "52": 34.3,
+    "53": 33.4,
+    "54": 32.5,
+    "55": 31.6,
+    "56": 30.6,
+    "57": 29.8,
+    "58": 28.9,
+    "59": 28.0,
+    "60": 27.1,
+    "61": 26.2,
+    "62": 25.4,
+    "63": 24.5,
+    "64": 23.7,
+    "65": 22.9,
+    "66": 22.0,
+    "67": 21.2,
+    "68": 20.4,
+    "69": 19.6,
+    "70": 18.8,
+    "71": 18.0,
+    "72": 17.2,
+    "73": 16.4,
+    "74": 15.6,
+    "75": 14.8,
+    "76": 14.1,
+    "77": 13.3,
+    "78": 12.6,
+    "79": 11.9,
+    "80": 11.2,
+    "81": 10.5,
+    "82": 9.9,
+    "83": 9.3,
+    "84": 8.7,
+    "85": 8.1,
+    "86": 7.6,
+    "87": 7.1,
+    "88": 6.6,
+    "89": 6.1,
+    "90": 5.7,
+    "91": 5.3,
+    "92": 4.9,
+    "93": 4.6,
+    "94": 4.3,
+    "95": 4.0,
+    "96": 3.7,
+    "97": 3.4,
+    "98": 3.2,
+    "99": 3.0,
+    "100": 2.8,
+    "101": 2.6,
+    "102": 2.5,
+    "103": 2.3,
+    "104": 2.2,
+    "105": 2.1,
+    "106": 2.1,
+    "107": 2.1,
+    "108": 2.0,
+    "109": 2.0,
+    "110": 2.0,
+    "111": 2.0,
+    "112": 2.0,
+    "113": 1.9,
+    "114": 1.9,
+    "115": 1.8,
+    "116": 1.8,
+    "117": 1.6,
+    "118": 1.4,
+    "119": 1.1,
+    "120": 1.0
+   },
+   "applicable_age": [
+    {
+     "born_from": 1951,
+     "age": 73
+    },
+    {
+     "born_from": 1960,
+     "age": 75
+    }
+   ],
+   "applicable_age_1959_proposed": 73,
+   "excise": 0.25,
+   "excise_corrected": 0.1,
+   "correction_years": 2,
+   "final_regs_apply_from": 2025,
+   "relief_years": [
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "minor_child_majority": 21,
+   "edb_age_gap": 10
+  },
+  "tax2026": {
+   "_source": "irsInflation2026, irsRp2532",
+   "rates": [
+    0.1,
+    0.12,
+    0.22,
+    0.24,
+    0.32,
+    0.35,
+    0.37
+   ],
+   "single": [
+    12400,
+    50400,
+    105700,
+    201775,
+    256225,
+    640600
+   ],
+   "joint": [
+    24800,
+    100800,
+    211400,
+    403550,
+    512450,
+    768700
+   ],
+   "hoh": [
+    17700,
+    67450,
+    105700,
+    201750,
+    256200,
+    640600
+   ],
+   "std": {
+    "single": 16100,
+    "joint": 32200,
+    "hoh": 24150
+   }
+  },
+  "hsa2026": {
+   "_source": "irsRp2519, irsP969, cfr42_406_6",
+   "self": 4400,
+   "family": 8750,
+   "catchup55": 1000,
+   "hdhp_min_deductible": {
+    "self": 1700,
+    "family": 3400
+   },
+   "hdhp_oop_max": {
+    "self": 8500,
+    "family": 17000
+   },
+   "self_2025": 4300,
+   "family_2025": 8550,
+   "penalty_nonqualified": 0.2,
+   "excess_excise": 0.06,
+   "parta_retro_months": 6,
+   "fica_employee": 0.0765
+  },
+  "cobra": {
+   "_source": "dolCobra, healthcareCobra, medicareStart",
+   "premium_max": 1.02,
+   "premium_disability": 1.5,
+   "months_job": 18,
+   "months_disability": 29,
+   "months_secondary": 36,
+   "election_days": 60,
+   "first_payment_days": 45,
+   "grace_days": 30,
+   "min_employees": 20,
+   "marketplace_sep_days": 60,
+   "medicare_sep_months": 8
   }
  }
 }

@@ -9,5 +9,5 @@ export const PAGES: PageDef[] = Object.entries(mods)
     return p;
   })
   .sort((a, b) => a.order - b.order || a.id.localeCompare(b.id));
-export const GROUPS: Group[] = ['tools', 'claiming', 'formula', 'family', 'taxwork', 'birthyear', 'salary'];
+export const GROUPS: Group[] = ['tools', 'claiming', 'formula', 'family', 'taxwork', 'retirement', 'birthyear', 'salary'];
 export const pageById = (id: string) => PAGES.find((p) => p.id === id);

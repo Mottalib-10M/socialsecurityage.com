@@ -57,4 +57,16 @@ h1 { font-weight: 700; } h2 { font-weight: 650; } h3 { font-weight: 600; }
   .clamp-toggle:checked ~ .clamp-more { display: none; }
   .clamp-more { display: inline-block; cursor: pointer; margin-top: 0.25rem; font-size: 0.875rem; font-weight: 600; color: #22213e; text-decoration: underline; text-underline-offset: 3px; }
   .clamp-toggle:focus-visible ~ .clamp-more { outline: 2px solid #3C3B6E; outline-offset: 3px; }
+
+  /* Folded sections (RECETTE §26): each H2 of a folded page is the <summary> of a closed <details>;
+     the text stays in the served HTML, the title alone shows until opened. */
+  .fold-sec { border-top: 1px solid var(--color-navy-200); }
+  .fold-sec:last-of-type { border-bottom: 1px solid var(--color-navy-200); }
+  .fold-sec > summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; cursor: pointer; list-style: none; padding: 0.9rem 0; }
+  .fold-sec > summary::-webkit-details-marker { display: none; }
+  .fold-sec > summary > h2 { margin: 0; font-size: 1.3rem; line-height: 1.35; color: var(--color-navy-900); }
+  .fold-sec > summary::after { content: "+"; flex-shrink: 0; font-size: 1.5rem; line-height: 1; color: var(--color-accent-600); }
+  .fold-sec[open] > summary::after { content: "\2212"; }
+  .fold-sec > .prose { padding-bottom: 1rem; }
+  .fold-sec > .prose > :first-child { margin-top: 0; }
 }

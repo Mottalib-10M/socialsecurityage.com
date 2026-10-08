@@ -19,15 +19,15 @@ export default definePage({
   group: 'tools',
   order: 40,
   tool: 'spouse',
-  related: ['divorced-spouse', 'married-couples', 'family-maximum', 'survivor-calculator', 'full-retirement-age'],
+  related: ['divorced-spouse', 'married-couples', 'family-maximum', 'survivor-calculator', 'full-retirement-age', 'cobra-cost'],
   sources: ['ssaSpouse', 'cfr404_330', 'pomsDeemed', 'cfr404_410', 'cfr404_331', 'cfr404_415'],
   en: {
     slug: 'spousal-benefits-calculator',
     nav: 'Spousal benefits',
     card: `Up to half the worker's PIA at full retirement age, ${pc(at62)} at 62, and only the part above your own benefit.`,
-    title: `Spousal Benefits 2026: Half the PIA, ${pc(at62)} at Age 62`,
-    description: `Spousal benefits in 2026: up to 50% of the worker's PIA at your full retirement age, ${pc(at62)} at 62 when it is 67, paid only above your own PIA. Run your own case.`,
-    h1: 'Spousal benefits calculator: what a husband or wife can draw on the other\'s record',
+    title: `Social Security Spousal Benefits 2026: Up to 50% of the PIA`,
+    description: `Social Security spousal benefits in 2026: up to 50% of the worker's PIA at your full retirement age, ${pc(at62)} at 62 when it is 67, only above your own PIA.`,
+    h1: 'Social Security spousal benefits calculator: what a husband or wife can draw on the other\'s record',
     intro: 'Enter both PIAs and the spouse\'s start age: the tool applies deemed filing and shows the own benefit and the spousal top-up separately.',
     resume: `A spouse can receive up to ${pc(P.family.spouse_max)} of the worker's primary insurance amount, but only at the spouse's own full retirement age and only as a top-up above the spouse's own PIA. With a full retirement age of 67, starting at exactly 62 cuts that half to ${pc(at62)} of the worker's PIA, because the spouse reduction is 25/36 of 1% for each of the first 36 months early and 5/12 of 1% beyond. If the worker's PIA is ${$(W)} and the spouse has no record, the spouse gets ${$(none62.total)} a month from 62 and 1 month and ${$(P.family.spouse_max * W)} at 67. If the spouse has an own PIA of ${$(OWN)}, deemed filing pays both together: ${$(own62.total)} at 62 and 1 month, ${$(ownFra.total)} at 67. There are no delayed credits on the spousal part, the worker must already be receiving benefits, and a spouse caring for the worker's child under 16 is paid without the age reduction.`,
     faqs: [
@@ -52,6 +52,9 @@ ${h.table(['Spouse starts at', 'Share of worker PIA, no own record', 'No own rec
 
 <h2>Who must have filed, and whose earnings count</h2>
 <p>A current spouse can only be paid once the worker is entitled to retirement or disability benefits. A divorced spouse, married for at least ${P.family.divorce_marriage_years} years and divorced for at least ${P.family.divorce_independent_years}, can be paid as soon as the ex is 62, filed or not (${h.src('cfr404_331', '20 CFR 404.331')}). If the worker claims before full retirement age and keeps working, the earnings test also withholds from the spouse benefit paid on that record, except for a divorced spouse divorced 2 years or more (${h.src('cfr404_415', '20 CFR 404.415(b)')}). The ${h.a('divorced-spouse', 'divorced spouse page')} covers the ex-spouse rules in detail.</p>
+
+<h2>When the older spouse reaches Medicare first</h2>
+<p>Couples often reach 65 years apart, and the spousal benefit is only part of the transition. If the worker's employer plan covered both and the worker becomes entitled to Medicare, the younger spouse can keep that plan through COBRA for up to 36 months, at up to 102% of its full cost; the ${h.a('cobra-cost', 'COBRA cost page')} compares that bridge with a Marketplace plan. On a joint return, Medicare surcharges start above twice the single income threshold but apply to each spouse enrolled.</p>
 
 <h2>Limits of the tool</h2>
 <p>It assumes a spouse full retirement age from the birth year you pick and a PIA for each person, taken from each statement. It does not apply the family maximum, the earnings test or the government pension rules that existed before the ${h.a('ssfa', 'Social Security Fairness Act')}. With a child in care, it compares the unreduced spouse benefit taken alone with the own benefit plus the top-up, and shows the higher of the two.</p>`;
