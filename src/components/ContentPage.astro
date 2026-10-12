@@ -43,15 +43,14 @@ const miniHref = page.miniHref && ROUTES.some((r) => r.id === page.miniHref) ? r
 ---
 <PageLayout title={x.title} description={x.description} lang={lang} jsonLd={jsonLd} faqs={x.faqs} related={related} sources={sources} breadcrumbs={[{ label: x.nav }]}>
   <article>
-    <header class="mb-6">
-      <h1 class="text-3xl font-bold text-navy-900 md:text-4xl">{x.h1}</h1>
-      <p class="mt-3 text-lg text-navy-700">{x.intro}</p>
-      <p class="mt-3 text-sm text-navy-600">{ui.reviewedBy} <a href={route('about', lang)} class="underline hover:text-navy-900">{AUTHOR_NAME}</a> · <a href={route('editorial', lang)} class="underline hover:text-navy-900">{ui.editorialPolicy}</a> · <a href={methodHref} class="underline hover:text-navy-900">How we calculate</a></p>
+    <header class="mb-4">
+      <h1 class="text-[1.75rem] font-bold text-navy-900 max-sm:leading-tight sm:text-3xl md:text-4xl">{x.h1}</h1>
+      <p class="mt-2 text-base text-navy-700 sm:text-lg">{x.intro}</p>
     </header>
     {page.tool ? (
       <>
-        <Clamp text={x.resume} lang={lang} id={`clamp-${page.id}`} class="mb-6" />
-        <div data-outil>
+        <Clamp text={x.resume} lang={lang} id={`clamp-${page.id}`} class="mb-3" />
+        <div data-outil class="mb-4">
           {page.tool === 'record' && <RecordCalculator client:load methodHref={methodHref} />}
           {page.tool === 'claiming' && <ClaimingTool client:load />}
           {page.tool === 'fra' && <FraTool client:load />}
@@ -60,16 +59,19 @@ const miniHref = page.miniHref && ROUTES.some((r) => r.id === page.miniHref) ? r
           {page.tool === 'tax' && <TaxTool client:load />}
           {page.tool === 'earnings' && <EarningsTool client:load />}
         </div>
+        <p class="mb-2 text-sm text-navy-600">{ui.reviewedBy} <a href={route('about', lang)} class="underline hover:text-navy-900">{AUTHOR_NAME}</a> · <a href={route('editorial', lang)} class="underline hover:text-navy-900">{ui.editorialPolicy}</a> · <a href={methodHref} class="underline hover:text-navy-900">How we calculate</a></p>
       </>
     ) : page.fold ? (
       <>
-        <Clamp text={x.resume} lang={lang} id={`clamp-${page.id}`} class="mb-6" />
-        {page.mini && <MiniSim client:load kind={page.mini} lang={lang} href={miniHref} />}
+        <Clamp text={x.resume} lang={lang} id={`clamp-${page.id}`} class="mb-3" />
+        {page.mini && <MiniSim client:load spacing="mb-4 mt-3" kind={page.mini} lang={lang} href={miniHref} />}
+        <p class="mb-2 text-sm text-navy-600">{ui.reviewedBy} <a href={route('about', lang)} class="underline hover:text-navy-900">{AUTHOR_NAME}</a> · <a href={route('editorial', lang)} class="underline hover:text-navy-900">{ui.editorialPolicy}</a> · <a href={methodHref} class="underline hover:text-navy-900">How we calculate</a></p>
       </>
     ) : (
       <>
-        <p class="mb-6 text-navy-800">{x.resume}</p>
-        {page.mini && <MiniSim client:load kind={page.mini} lang={lang} href={miniHref} />}
+        <Clamp text={x.resume} lang={lang} id={`clamp-${page.id}`} class="mb-3" />
+        {page.mini && <MiniSim client:load spacing="mb-4 mt-3" kind={page.mini} lang={lang} href={miniHref} />}
+        <p class="mb-6 text-sm text-navy-600">{ui.reviewedBy} <a href={route('about', lang)} class="underline hover:text-navy-900">{AUTHOR_NAME}</a> · <a href={route('editorial', lang)} class="underline hover:text-navy-900">{ui.editorialPolicy}</a> · <a href={methodHref} class="underline hover:text-navy-900">How we calculate</a></p>
       </>
     )}
     {page.fold ? (

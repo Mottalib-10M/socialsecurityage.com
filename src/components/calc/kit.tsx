@@ -1,5 +1,5 @@
 /** Shared pieces of the calculators: birth-date selects, result card, ledger of the PIA, share bar. */
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import SelectField from '../ui/SelectField';
 import { formatMoney, formatNumber, formatPercent } from '../../lib/format';
 import type { PiaResult, ClaimResult } from '../../lib/engine/ss';
@@ -23,12 +23,29 @@ export function BirthDateFields({ id, y, m, d, onChange, fromYear = 1940, toYear
 }
 
 export function ResultCard({ label, value, sub, children }: { label: string; value: string; sub?: string; children?: React.ReactNode }) {
+  // Phone: while the result card is below the screen, a bar pinned to the bottom shows the key figure (RECETTE §5, 2026-10-11).
+  const card = useRef<HTMLDivElement>(null);
+  const [below, setBelow] = useState(false);
+  useEffect(() => {
+    const el = card.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+    const io = new IntersectionObserver(([e]) => setBelow(!e.isIntersecting && e.boundingClientRect.top > 0));
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
   return (
-    <div aria-live="polite" className="rounded-xl border border-accent-200 bg-accent-50 p-5">
+    <div ref={card} aria-live="polite" data-resultat className="rounded-xl border border-accent-200 bg-accent-50 p-5">
       <p className="text-sm font-medium text-navy-700">{label}</p>
       <p className="tabular-nums mt-1 text-4xl font-bold text-navy-900">{value}</p>
       {sub && <p className="mt-1 text-sm text-navy-700">{sub}</p>}
       {children}
+      {below && (
+        <button type="button" aria-hidden="true" tabIndex={-1} onClick={() => card.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+          className="fixed inset-x-0 bottom-0 z-40 flex items-baseline justify-between gap-3 border-t border-accent-200 bg-accent-50 px-4 py-3 text-left shadow-lg lg:hidden">
+          <span className="text-sm font-medium text-navy-700">{label}</span>
+          <span className="tabular-nums text-xl font-bold text-navy-900">{value}</span>
+        </button>
+      )}
     </div>
   );
 }

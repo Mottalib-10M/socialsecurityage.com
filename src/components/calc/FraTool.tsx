@@ -19,7 +19,7 @@ export default function FraTool() {
   const mon = (x: { y: number; m: number }) => `${MONTHS[x.m - 1]} ${x.y}`;
   return (
     <div className="rechner rounded-2xl border border-navy-200 bg-white p-4 sm:p-6">
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-6 lg:grid-cols-2 lg:items-start">
         <form className="grid grid-cols-2 gap-x-4 gap-y-2" onSubmit={(e) => e.preventDefault()}><BirthDateFields id="fra-b" y={b.y} m={b.m} d={b.d} onChange={setB} /></form>
         <ResultCard label="Your full retirement age" value={ageText(r.fra.total)} sub={`Reached in ${mon(r.at)}`}>
           <Rows rows={[['Earliest retirement benefit (62 for the whole month)', mon(b.d === 2 ? r.at62 : { y: r.at62.m === 12 ? r.at62.y + 1 : r.at62.y, m: r.at62.m === 12 ? 1 : r.at62.m + 1 })], ['Delayed credits stop', mon(r.at70)], ['Full retirement age as a widow(er)', `${ageText(r.sv.total)} (${mon(r.atS)})`], ['Birth year SSA uses', String(r.e.y)]]} />

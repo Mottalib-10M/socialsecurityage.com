@@ -22,7 +22,7 @@ export default function SurvivorTool() {
   }, [pia, dy, dc, sy, sc]);
   return (
     <div className="rechner rounded-2xl border border-navy-200 bg-white p-4 sm:p-6">
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-6 lg:grid-cols-2 lg:items-start">
         <form className="grid grid-cols-2 gap-x-4 gap-y-2" onSubmit={(e) => e.preventDefault()}>
           <NumberField id="sv-pia" className="col-span-full" label="PIA of the spouse who died" value={pia} onChange={setPia} unit="$/mo" max={10_000} />
           <SelectField id="sv-dy" label="Their year of birth" value={String(dy)} onChange={(v) => setDy(Number(v))} options={years.map((x) => ({ value: String(x), label: String(x) }))} />
