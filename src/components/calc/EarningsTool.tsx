@@ -17,7 +17,7 @@ export default function EarningsTool() {
   return (
     <div className="rechner rounded-2xl border border-navy-200 bg-white p-4 sm:p-6">
       <div className="grid gap-6 lg:grid-cols-2 lg:items-start">
-        <form className="grid grid-cols-2 gap-x-4 gap-y-2" onSubmit={(ev) => ev.preventDefault()}>
+        <form className="grid content-start grid-cols-2 gap-x-4 gap-y-2" onSubmit={(ev) => ev.preventDefault()}>
           <NumberField id="et-b" label="Monthly benefit" value={b} onChange={setB} unit="$" max={10_000} />
           <NumberField id="et-e" label={s === 'fraYear' ? '2026 earnings before the FRA month' : 'Earnings in 2026'} value={e} onChange={setE} unit="$" max={5_000_000} help="Wages or net self-employment; pensions, interest and investment income do not count." />
           <SelectField id="et-s" label="Your situation in 2026" value={s} onChange={(v) => setS(v as FraYearStatus)} options={[{ value: 'before', label: 'Under full retirement age all year' }, { value: 'fraYear', label: 'Reaching full retirement age in 2026' }, { value: 'after', label: 'Past full retirement age' }]} />

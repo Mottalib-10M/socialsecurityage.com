@@ -54,7 +54,7 @@ export default function RecordCalculator({ methodHref }: { methodHref?: string }
   return (
     <div className="rechner rounded-2xl border border-navy-200 bg-white p-4 sm:p-6">
       <div className="grid gap-6 lg:grid-cols-2 lg:items-start">
-        <form className="grid grid-cols-2 gap-x-4 gap-y-2" onSubmit={(e) => e.preventDefault()}>
+        <form className="grid content-start grid-cols-2 gap-x-4 gap-y-2" onSubmit={(e) => e.preventDefault()}>
           <BirthDateFields id="rec-b" y={b.y} m={b.m} d={b.d} onChange={setB} />
           <div className="col-span-full">
             <label htmlFor="rec-text" className="mb-1 block text-sm font-medium text-navy-700">Your earnings record, one year per line</label>

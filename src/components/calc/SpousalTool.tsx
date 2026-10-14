@@ -23,7 +23,7 @@ export default function SpousalTool() {
   return (
     <div className="rechner rounded-2xl border border-navy-200 bg-white p-4 sm:p-6">
       <div className="grid gap-6 lg:grid-cols-2 lg:items-start">
-        <form className="grid grid-cols-2 gap-x-4 gap-y-2" onSubmit={(e) => e.preventDefault()}>
+        <form className="grid content-start grid-cols-2 gap-x-4 gap-y-2" onSubmit={(e) => e.preventDefault()}>
           <NumberField id="sp-w" label="Worker's PIA" value={w} onChange={setW} unit="$/mo" max={10_000} />
           <NumberField id="sp-o" label="Spouse's own PIA (0 if none)" value={o} onChange={setO} unit="$/mo" max={10_000} />
           <SelectField id="sp-y" label="Spouse's year of birth" value={String(y)} onChange={(v) => setY(Number(v))} options={years.map((x) => ({ value: String(x), label: String(x) }))} />

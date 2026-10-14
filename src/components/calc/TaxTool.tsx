@@ -17,7 +17,7 @@ export default function TaxTool() {
   return (
     <div className="rechner rounded-2xl border border-navy-200 bg-white p-4 sm:p-6">
       <div className="grid gap-6 lg:grid-cols-2 lg:items-start">
-        <form className="grid grid-cols-2 gap-x-4 gap-y-2" onSubmit={(e) => e.preventDefault()}>
+        <form className="grid content-start grid-cols-2 gap-x-4 gap-y-2" onSubmit={(e) => e.preventDefault()}>
           <SelectField id="tx-s" className="col-span-full" label="Filing status" value={s} onChange={(v) => setS(v as FilingStatus)} options={[{ value: 'single', label: 'Single, head of household, or married filing separately and lived apart all year' }, { value: 'joint', label: 'Married filing jointly' }, { value: 'separate_together', label: 'Married filing separately, lived together' }]} />
           <NumberField id="tx-b" label="Social Security received in the year (box 5 of SSA-1099)" value={b} onChange={setB} unit="$" max={1_000_000} />
           <NumberField id="tx-o" label="All other income, tax-exempt interest included" value={o} onChange={setO} unit="$" max={10_000_000} help="Pensions, IRA withdrawals, wages, interest, dividends, capital gains." />

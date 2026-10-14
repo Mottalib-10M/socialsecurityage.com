@@ -38,7 +38,7 @@ export default function Estimator({ methodHref, compact = false }: { methodHref?
   return (
     <div className="rechner rounded-2xl border border-navy-200 bg-white p-4 sm:p-6">
       <div className="grid gap-6 lg:grid-cols-2 lg:items-start">
-        <form className="grid grid-cols-2 gap-x-4 gap-y-2" onSubmit={(e) => e.preventDefault()}>
+        <form className="grid content-start grid-cols-2 gap-x-4 gap-y-2" onSubmit={(e) => e.preventDefault()}>
           <BirthDateFields id="est-b" y={b.y} m={b.m} d={b.d} onChange={setB} />
           <NumberField id="est-sal" className="col-span-full" label="Your yearly pay today (W-2 wages or net self-employment)" value={sal} onChange={setSal} unit="$" max={5_000_000} help={`Earnings above the 2026 taxable maximum (${usd(P.taxable_max_2026)}) do not raise the benefit.`} />
           <NumberField id="est-start" label="Age you started working" value={start} onChange={setStart} unit="yrs" max={70} />
