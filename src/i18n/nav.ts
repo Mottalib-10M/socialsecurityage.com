@@ -10,10 +10,15 @@ const FOOTER: Group[] = ['tools', 'claiming', 'formula', 'family', 'taxwork', 'r
 export const label = (id: string, _lang?: Locale) => CORE[id] ?? pageById(id)?.en.nav ?? id;
 const link = (id: string, lang: Locale): NavLink => ({ href: route(id, lang), label: label(id, lang) });
 const inGroup = (g: Group, lang: Locale) => PAGES.filter((p) => p.group === g).map((p) => link(p.id, lang));
-export function navCategories(lang: Locale): NavCategory[] {
+function categoriesCompletes(lang: Locale): NavCategory[] {
   return HEADER.map((g) => ({ label: GROUP_LABEL[g], links: inGroup(g, lang) })).filter((c) => c.links.length);
 }
-export const navDirect = (lang: Locale): NavLink[] => [link('method', lang)];
+// Intitules du menu du haut : courts, jamais sur deux lignes (les intitules complets restent en bas de page).
+const COURT: Record<string, string> = {"Claiming age": "Claiming", "How it is calculated": "Formula", "Spouses and survivors": "Spouses", "Taxes and work": "Tax & work", "Medicare and IRAs": "Medicare"};
+export const navCategories = (lang: Locale, court = true): NavCategory[] =>
+  categoriesCompletes(lang).map((c) => (court ? { ...c, label: COURT[c.label] ?? c.label } : c));
+// Methode : liee en bas de page, hors du menu du haut pour qu'il tienne sur une ligne.
+export const navDirect = (_lang: Locale): NavLink[] => [];
 export const footerColumns = (lang: Locale): NavCategory[] => [
   ...FOOTER.map((g) => ({ label: GROUP_LABEL[g], links: inGroup(g, lang) })).filter((c) => c.links.length),
   { label: 'This site', links: ['home', 'method', 'about', 'contact', 'editorial', 'widget', 'terms', 'privacy', 'cookies'].map((i) => link(i, lang)) },
